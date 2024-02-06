@@ -16,6 +16,7 @@ public class LaneScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        tiles = new List<GameObject>();
         GenerateLane();
     }
 
@@ -28,22 +29,22 @@ public class LaneScript : MonoBehaviour
     /**
     * Clear the lane 
     */
-    void clearLane() {
+    void ClearLane() {
         foreach (GameObject tile in tiles)
         {
             Destroy(tile);
         }
         tiles.Clear();
     }
+
     /**
     * Generate a new lane
     */
     void GenerateLane()
     {
-        //iterate from 1 for accurate positioning
-        for (int i = 1; i <= laneLength; i++)
+        for (int i = 0; i < laneLength; i++)
         {
-            float offset = i-laneLength/2f-0.5f;
+            float offset = i-laneLength/2f+0.5f;
             GameObject tile = Instantiate(tilePrefab, new Vector3(offset, 0, 0), Quaternion.identity);
             tiles.Add(tile);
             tile.transform.SetParent(this.transform);
