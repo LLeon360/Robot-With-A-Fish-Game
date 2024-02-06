@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New Hotbar Element", menuName = "Hotbar")]
+[CreateAssetMenu(fileName = "New Hotbar Element", menuName = "Hotbar Element Object")]
 public class HotbarElementObject : ScriptableObject
 {
     [StringInList("Building", "Unit")] 
