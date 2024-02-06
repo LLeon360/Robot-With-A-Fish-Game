@@ -86,7 +86,7 @@ public class HotbarManager : MonoBehaviour
             //parent the slot to this hotbar
             hotbarSlot.transform.SetParent(this.transform);
             hotbarSlotRectTransform.localPosition = new Vector3(hotbarSlotWidth * i, 0, 0);
-
+            hotbarSlotRectTransform.localScale = new Vector3(1, 1, 1);
             hotbarSlot.GetComponent<HotbarSlot>().SetHotbarElement(hotbarElements[i]);
             hotbarSlots.Add(hotbarSlot);
         }
@@ -111,6 +111,7 @@ public class HotbarManager : MonoBehaviour
         RectTransform slotSelectorRectTransform = slotSelector.GetComponent<RectTransform>();
         //lerp to selection
         Vector3 targetPosition = new Vector3(hotbarSlotWidth * selectedSlot, 0, 0);
-        slotSelectorRectTransform.localPosition = Vector2.Lerp(slotSelectorRectTransform.localPosition, targetPosition, Time.deltaTime * 15);
+        slotSelectorRectTransform.localPosition = Vector2.Lerp(slotSelectorRectTransform.localPosition, targetPosition, 
+        Time.deltaTime * 15);
     }
 }

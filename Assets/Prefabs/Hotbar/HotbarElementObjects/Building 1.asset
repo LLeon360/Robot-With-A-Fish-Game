@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slotType: Building
   deployPrefab: {fileID: 0}
-  cost: 0
-  cooldown: 0
-  icon: {fileID: 0}
+  cost: 2
+  cooldown: 4
+  icon: {fileID: 1632033160, guid: 579dfb98c38989e428358d2c40eed628, type: 3}
