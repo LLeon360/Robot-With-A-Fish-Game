@@ -342,62 +342,54 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 126043530074573371, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_Name
-      value: Control Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.62715894
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.9954547
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.04360536
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 499446827706556400, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 846283759298764926, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: laneManager
-      value: 
-      objectReference: {fileID: 221684872}
     - target: {fileID: 2316619414751317878, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
       propertyPath: laneManager
       value: 
       objectReference: {fileID: 221684872}
-    - target: {fileID: 8840906574405291077, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
-      propertyPath: laneManager
-      value: 
-      objectReference: {fileID: 221684872}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8830621692697137165, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_Name
+      value: Control Manager
+      objectReference: {fileID: 0}
     - target: {fileID: 8847892328531896914, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
       propertyPath: laneManager
       value: 
