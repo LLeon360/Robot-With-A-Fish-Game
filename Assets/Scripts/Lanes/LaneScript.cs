@@ -45,9 +45,10 @@ public class LaneScript : MonoBehaviour
         for (int i = 0; i < laneLength; i++)
         {
             float offset = i-laneLength/2f+0.5f;
-            GameObject tile = Instantiate(tilePrefab, new Vector3(offset, 0, 0), Quaternion.identity);
+            GameObject tile = Instantiate(tilePrefab, Vector3.zero, Quaternion.identity);
             tiles.Add(tile);
             tile.transform.SetParent(this.transform);
+            tile.transform.localPosition = new Vector3(offset, 0, 0);
         }
     }
 }

@@ -43,9 +43,10 @@ public class LaneManager : MonoBehaviour
         for (int i = 0; i < laneCount; i++)
         {
             float offset = i-laneCount/2f+0.5f;
-            GameObject lane = Instantiate(lanePrefab, new Vector3(0, offset, 0), Quaternion.identity);
+            GameObject lane = Instantiate(lanePrefab, Vector3.zero, Quaternion.identity);
             lanes.Add(lane);
             lane.transform.SetParent(this.transform);
+            lane.transform.localPosition = new Vector3(0, offset, 0);
         }
     }
 }
