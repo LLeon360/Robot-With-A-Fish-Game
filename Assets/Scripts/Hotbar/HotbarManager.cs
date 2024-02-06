@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class HotbarManager : MonoBehaviour
 {
     [SerializeField]
@@ -12,16 +13,22 @@ public class HotbarManager : MonoBehaviour
     private List<GameObject> hotbarSlots;
     [SerializeField]
     private float hotbarSlotWidth = 80f;
+
+    [SerializeField]
+    private GameObject slotSelector;
+    private int selectedSlot;
     // Start is called before the first frame update
     void Start()
     {
         hotbarElements = new List<HotbarElement>();
         hotbarSlots = new List<GameObject>();
+        selectedSlot = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("DEBUG: REMOVE THIS, Pressing Space will rerender all hotbar elements");
         if(Input.GetKeyDown(KeyCode.Space)) //testing purposes, TODO remove
         {
             //rerender all
@@ -57,10 +64,6 @@ public class HotbarManager : MonoBehaviour
     }
 
     void UpdateHotbarElements() {
-        Debug.Log("Updating hotbar elements " + hotbarElements);
-        Debug.Log("Is hotbar null " + hotbarElements == null);
-        Debug.Log("Updating hotbar element objs " + hotbarElementObjects);
-        Debug.Log("Is hotbar objs list null " + hotbarElementObjects == null);
         //clear old wrappers
         hotbarElements.Clear();
         //wrap HotbarElementObjects (ScriptableObject data) into HotbarElements
@@ -84,8 +87,20 @@ public class HotbarManager : MonoBehaviour
 
             hotbarSlot.GetComponent<HotbarSlot>().SetHotbarElement(hotbarElements[i]);
             hotbarSlots.Add(hotbarSlot);
-            
-            Debug.Log("Rendering hotbar element " + i + " " + hotbarElements[i].hotbarElementObject.name);
+        }
+    }
+
+    public void OnCycle(InputAction.CallbackContext ctx) {
+        if(ctx.performed) {
+            float scroll = ctx.ReadValue<float>();
+            if(scroll > 0) {
+                //cycle right
+                Debug.Log("Cycling right");
+            }
+            else if(scroll < 0) {
+                //cycle left
+                Debug.Log("Cycling left");
+            }
         }
     }
 }

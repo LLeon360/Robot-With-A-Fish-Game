@@ -43,6 +43,7 @@ public class LaneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("DEBUG: REMOVE THIS, Pressing Space will regenerate all lanes");
         // TODO remove this, for testing purposes generate lanes on update, this isn't necessary
         if(Input.GetKeyDown(KeyCode.Space))
         {
