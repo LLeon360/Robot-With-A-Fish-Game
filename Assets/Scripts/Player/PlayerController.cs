@@ -81,26 +81,20 @@ public class PlayerController : MonoBehaviour
     }
 
     void MoveX(float direction) {
+        int laneLength = laneManager.GetComponent<LaneManager>().laneLength;
         if(direction < 0) {
-            if(currentTile > 0) {
-                currentTile--;
-            }
+            currentTile = (currentTile - 1 + laneLength) % laneLength;
         } else if(direction > 0) {
-            if(currentTile < laneManager.GetComponent<LaneManager>().laneLength - 1) {
-                currentTile++;
-            }
+            currentTile = (currentTile + 1) % laneLength;
         }
     }
 
     void MoveY(float direction) {
+        int laneCount = laneManager.GetComponent<LaneManager>().laneCount;
         if(direction < 0) {
-            if(currentLane > 0) {
-                currentLane--;
-            }
+            currentLane = (currentLane - 1 + laneCount) % laneCount; //strictly positive
         } else if(direction > 0) {
-            if(currentLane < laneManager.GetComponent<LaneManager>().laneCount - 1) {
-                currentLane++;
-            }
+            currentLane = (currentLane + 1) % laneCount;
         }
     }
 
@@ -108,6 +102,9 @@ public class PlayerController : MonoBehaviour
         targetTile = laneManager.GetComponent<LaneManager>().GetTile(currentLane, currentTile);
         if(targetTile == null){
             Debug.LogError("Target Tile is null, failed to fetch");
+            Debug.LogError("Forcing " + gameObject.name + " to back to (0, 0)");
+            currentLane = 0;
+            currentTile = 0;
             return;
         }
     }
