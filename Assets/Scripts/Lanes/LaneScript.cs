@@ -60,10 +60,17 @@ public class LaneScript : MonoBehaviour
             tiles.Add(tile);
             tile.transform.SetParent(this.transform);
             tile.transform.localPosition = new Vector3(offset, 0, 0);
+            tile.name = "Tile " + i;
+            
             //randomly pick a tile sprite
             tile.GetComponent<SpriteRenderer>().sprite = tileSprites[Random.Range(0, tileSprites.Count)];
             //set sorting layer to tiles
             tile.GetComponent<SpriteRenderer>().sortingLayerName = "Tiles";    
         }
+    }
+
+    // get the tile at the index
+    public GameObject GetTile(int index) {
+        return tiles[index];
     }
 }

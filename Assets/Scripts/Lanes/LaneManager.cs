@@ -7,9 +7,28 @@ public class LaneManager : MonoBehaviour
     [SerializeField] 
     private GameObject lanePrefab;
     [SerializeField]
-    private int laneCount = 3;
+    private int _laneCount = 3;
+    public int laneCount
+    {
+        get { return _laneCount; }
+        set
+        {
+            _laneCount = value;
+        }
+    }
+
     [SerializeField]
-    private int laneLength = 10;
+    private int _laneLength = 10;
+
+    public int laneLength
+    {
+        get { return _laneLength; }
+        set
+        {
+            // lane length should be even, supposing we don't have a neutral tile between\
+            _laneLength = value;
+        }
+    }
     [SerializeField]
     private float screenHeight = 10f;
     private List<GameObject> lanes;
@@ -48,11 +67,11 @@ public class LaneManager : MonoBehaviour
     */
     void GenerateLanes()
     {
-        float laneWidth = (screenHeight)/(laneCount-1);
+        float laneWidth = (screenHeight)/(_laneCount-1);
 
-        for (int i = 0; i < laneCount; i++)
+        for (int i = 0; i < _laneCount; i++)
         {
-            float offset = screenHeight * (-0.5f + (i+1f)/(laneCount+1));
+            float offset = screenHeight * (-0.5f + (i+1f)/(_laneCount+1));
             GameObject lane = Instantiate(lanePrefab, Vector3.zero, Quaternion.identity);
 
             lanes.Add(lane);
@@ -63,4 +82,10 @@ public class LaneManager : MonoBehaviour
         }
     }
     
+    // get the lane at the index
+    public GameObject GetLane(int index)
+    {
+        return lanes[index];
+    }
+
 }
