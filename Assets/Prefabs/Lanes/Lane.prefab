@@ -45,5 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 8104697032987540518, guid: 805aa0b428a2ca14aabb01014bc15179, type: 3}
-  laneLength: 10
   tiles: []
+  tileSprites:
+  - {fileID: 1699860297, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
+  - {fileID: 924569259, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
+  - {fileID: -701751368, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
+  - {fileID: 601888533, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
