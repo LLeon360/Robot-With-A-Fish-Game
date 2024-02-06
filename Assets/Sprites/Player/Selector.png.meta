@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 579dfb98c38989e428358d2c40eed628
+guid: a76b823f82213b14a8fc267456f2d123
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -121,112 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Head
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 319
-        width: 123
-        height: 74
-      alignment: 9
-      pivot: {x: 0.5, y: 0.037483834}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6b4cc2dfd0da36f499d682d28582f3bc
-      internalID: -1138642066
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Robot Body
-      rect:
-        serializedVersion: 2
-        x: 148
-        y: 269
-        width: 111
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ed4b5bb4657911c4a96d7245a46d3297
-      internalID: 1632033160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hand
-      rect:
-        serializedVersion: 2
-        x: 277
-        y: 341
-        width: 47
-        height: 51
-      alignment: 9
-      pivot: {x: 0.46833834, y: 0.8987702}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9e8ebcb3cd2d574428de10f646e04a08
-      internalID: 1792619375
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wheel
-      rect:
-        serializedVersion: 2
-        x: 276
-        y: 275
-        width: 45
-        height: 43
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9ebc37af47ad1c74a9faa6dbfa4ce1bc
-      internalID: 1918955876
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Fish
-      rect:
-        serializedVersion: 2
-        x: 9
-        y: 132
-        width: 311
-        height: 127
-      alignment: 9
-      pivot: {x: 0.2607563, y: 0.46875384}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff2df243dd1b4ec4eb50ab85c3a53694
-      internalID: 1949749108
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -237,12 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Fish: 1949749108
-      Hand: 1792619375
-      Head: -1138642066
-      Robot Body: 1632033160
-      Wheel: 1918955876
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
