@@ -9,7 +9,7 @@ public class LaneScript : MonoBehaviour
     private GameObject tilePrefab;
 
     [SerializeField]
-    private int laneLength;
+    private int laneLength; //lane length should be even, supposing we don't have a neutral tile between
     [SerializeField]
     private List<GameObject> tiles;
 
@@ -40,9 +40,10 @@ public class LaneScript : MonoBehaviour
     */
     void GenerateLane()
     {
-        for (int i = 0; i < laneLength; i++)
+        //iterate from 1 for accurate positioning
+        for (int i = 1; i <= laneLength; i++)
         {
-            float offset = i-laneLength/2f;
+            float offset = i-laneLength/2f-0.5f;
             GameObject tile = Instantiate(tilePrefab, new Vector3(offset, 0, 0), Quaternion.identity);
             tiles.Add(tile);
             tile.transform.SetParent(this.transform);
