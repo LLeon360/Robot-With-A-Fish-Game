@@ -24,7 +24,7 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Place1",
+                    "name": "Action1",
                     "type": "Button",
                     "id": "6b68f339-64f3-4ed9-9634-69554e2138a6",
                     "expectedControlType": "Button",
@@ -33,7 +33,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Place2",
+                    "name": "Action2",
                     "type": "Button",
                     "id": "4882ab49-dd7e-4ec9-a429-149c7e2d22cb",
                     "expectedControlType": "Button",
@@ -123,7 +123,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Place2",
+                    "action": "Action2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -134,7 +134,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Place1",
+                    "action": "Action1",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
