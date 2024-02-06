@@ -23,6 +23,7 @@ public class HotbarManager : MonoBehaviour
         hotbarElements = new List<HotbarElement>();
         hotbarSlots = new List<GameObject>();
         selectedSlot = 0;
+        UpdateLists();
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class HotbarManager : MonoBehaviour
             //rerender all
             UpdateLists();
         }
+        UpdateSelection();
     }
 
     public void SetHotbarElementObjects(List<HotbarElementObject> hotbarElementObjects)
@@ -91,16 +93,24 @@ public class HotbarManager : MonoBehaviour
     }
 
     public void OnCycle(InputAction.CallbackContext ctx) {
+        int hotbarSize = hotbarSlots.Count;
         if(ctx.performed) {
             float scroll = ctx.ReadValue<float>();
             if(scroll > 0) {
                 //cycle right
-                Debug.Log("Cycling right");
+                selectedSlot = (selectedSlot + 1) % hotbarSize;
             }
             else if(scroll < 0) {
                 //cycle left
-                Debug.Log("Cycling left");
+                selectedSlot = (selectedSlot - 1 + hotbarSize) % hotbarSize;
             }
         }
+    }
+
+    public void UpdateSelection() {
+        RectTransform slotSelectorRectTransform = slotSelector.GetComponent<RectTransform>();
+        //lerp to selection
+        Vector3 targetPosition = new Vector3(hotbarSlotWidth * selectedSlot, 0, 0);
+        slotSelectorRectTransform.localPosition = Vector2.Lerp(slotSelectorRectTransform.localPosition, targetPosition, Time.deltaTime * 15);
     }
 }
