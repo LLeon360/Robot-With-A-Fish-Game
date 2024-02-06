@@ -53,6 +53,7 @@ public class LaneScript : MonoBehaviour
     */
     void GenerateLane()
     {
+        ClearLane();
         for (int i = 0; i < laneLength; i++)
         {
             float offset = i - laneLength / 2f + 0.5f;
@@ -61,7 +62,7 @@ public class LaneScript : MonoBehaviour
             tile.transform.SetParent(this.transform);
             tile.transform.localPosition = new Vector3(offset, 0, 0);
             tile.name = "Tile " + i;
-            
+
             //randomly pick a tile sprite
             tile.GetComponent<SpriteRenderer>().sprite = tileSprites[Random.Range(0, tileSprites.Count)];
             //set sorting layer to tiles
@@ -71,6 +72,10 @@ public class LaneScript : MonoBehaviour
 
     // get the tile at the index
     public GameObject GetTile(int index) {
+        if(index < 0 || index >= tiles.Count) {
+            Debug.LogError("Index out of range");
+            return null;
+        }
         return tiles[index];
     }
 }

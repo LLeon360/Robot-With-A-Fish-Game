@@ -85,7 +85,18 @@ public class LaneManager : MonoBehaviour
     // get the lane at the index
     public GameObject GetLane(int index)
     {
+        if(index < 0 || index >= laneCount)
+        {
+            Debug.LogError("Invalid lane index");
+            return null;
+        }
         return lanes[index];
+    }
+
+    // get the Tile at a 2d inded
+    public GameObject GetTile(int laneIndex, int tileIndex)
+    {
+        return GetLane(laneIndex).GetComponent<LaneScript>().GetTile(tileIndex);
     }
 
 }

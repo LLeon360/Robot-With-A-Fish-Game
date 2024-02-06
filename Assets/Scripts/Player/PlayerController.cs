@@ -60,7 +60,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //update target tile
-        targetTile = laneManager.GetComponent<LaneManager>().GetLane(currentLane).GetComponent<LaneScript>().GetTile(currentTile);
+        FetchTargetTile();
         UpdateTransformPosition();
     }
 
@@ -104,9 +104,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void FetchTargetTile() {
+        targetTile = laneManager.GetComponent<LaneManager>().GetTile(currentLane, currentTile);
+        if(targetTile == null){
+            Debug.LogError("Target Tile is null, failed to fetch");
+            return;
+        }
+    }
+
     void UpdateTransformPosition() {
+        if(!targetTile) {
+            return;
+        }
         Vector3 targetPosition = new Vector3(targetTile.transform.position.x, targetTile.transform.position.y, 0);
-        Debug.Log("From " + transform.position + " to " + targetPosition + " with " + Time.deltaTime * 10);
         transform.position = Vector2.Lerp(transform.position, targetPosition, Time.deltaTime * 15);
     }
 }

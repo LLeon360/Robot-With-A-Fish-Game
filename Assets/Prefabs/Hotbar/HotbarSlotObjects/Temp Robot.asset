@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
+  m_Name: Temp Robot
+  m_EditorClassIdentifier: 
+  slotType: Unit
+  deployPrefab: {fileID: 882328141090449635, guid: 8e8b404d9b1964148b766ad1f86f38be, type: 3}
+  cost: 1
+  cooldown: 1
+  icon: {fileID: -1138642066, guid: 579dfb98c38989e428358d2c40eed628, type: 3}
