@@ -424,8 +424,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 956349765620679030, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
+      propertyPath: m_Time
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 956349765620679030, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
       propertyPath: m_Emitting
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 956349765620679030, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
+      propertyPath: m_MinVertexDistance
+      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 2826439514708148715, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
       propertyPath: m_LocalPosition.y
