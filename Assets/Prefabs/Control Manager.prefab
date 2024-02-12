@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneManager: {fileID: 0}
-  isPlayerLeft: 0
+  playerNum: 1
   moveXDelay: 0.15
   moveYDelay: 0.3
 --- !u!1 &7359945511267973029
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   laneManager: {fileID: 0}
-  isPlayerLeft: 1
+  playerNum: 0
   moveXDelay: 0.15
   moveYDelay: 0.3
 --- !u!1 &8830621692697137165
@@ -270,11 +270,35 @@ MonoBehaviour:
     m_ActionId: 4882ab49-dd7e-4ec9-a429-149c7e2d22cb
     m_ActionName: Player/Action2[/Keyboard/m]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: HotbarManager, Assembly-CSharp
+        m_MethodName: OnCycle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 04f964e1-e343-4276-a9c8-d75fa10d7942
     m_ActionName: Player/Cycle1[/Keyboard/c,/Keyboard/v]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: HotbarManager, Assembly-CSharp
+        m_MethodName: OnCycle
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: e9cd474f-30df-4144-8105-fb76612cdcbf
     m_ActionName: Player/Cycle2[/Keyboard/comma,/Keyboard/period]
   - m_PersistentCalls:

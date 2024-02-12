@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private int currentTile = 0;
 
     [SerializeField]
-    private bool isPlayerLeft = true;
+    private int playerNum = 0;
 
     //target selector should be pointed to
     private GameObject targetTile;
@@ -29,17 +29,20 @@ public class PlayerController : MonoBehaviour
 
     private float directionX = 0, directionY = 0;
 
+    private HotbarManager hotbarManager;
+
     // Start is called before the first frame update
     void Start()
     {
         laneManager = LaneManager.Instance;
         
         currentLane = 0;
-        if(isPlayerLeft) {
+        if(playerNum == 0) {
             currentTile = 0;
         } else {
             currentTile = laneManager.laneLength -1;
         }
+        hotbarManager = GameObject.Find("Hotbar "+(playerNum+1)).GetComponent<HotbarManager>();
     }
 
     // Update is called once per frame
