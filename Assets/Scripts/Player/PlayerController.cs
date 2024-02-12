@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     //lane manager, need it to snap to lanes and stay in grid
     [SerializeField]
-    private GameObject laneManager;
+    private LaneManager laneManager;
     private int currentLane = 0;
     private int currentTile = 0;
 
@@ -32,13 +32,13 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        laneManager = GameObject.Find("Lane Manager");
+        laneManager = LaneManager.Instance;
         
         currentLane = 0;
         if(isPlayerLeft) {
             currentTile = 0;
         } else {
-            currentTile = laneManager.GetComponent<LaneManager>().laneLength -1;
+            currentTile = laneManager.laneLength -1;
         }
     }
 
@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void MoveX(float direction) {
-        int laneLength = laneManager.GetComponent<LaneManager>().laneLength;
+        int laneLength = laneManager.laneLength;
         if(direction < 0) {
             currentTile = (currentTile - 1 + laneLength) % laneLength;
         } else if(direction > 0) {
@@ -90,7 +90,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void MoveY(float direction) {
-        int laneCount = laneManager.GetComponent<LaneManager>().laneCount;
+        int laneCount = laneManager.laneCount;
         if(direction < 0) {
             currentLane = (currentLane - 1 + laneCount) % laneCount; //strictly positive
         } else if(direction > 0) {
@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void FetchTargetTile() {
-        targetTile = laneManager.GetComponent<LaneManager>().GetTile(currentLane, currentTile);
+        targetTile = laneManager.GetTile(currentLane, currentTile);
         if(targetTile == null){
             Debug.LogError("Target Tile is null, failed to fetch");
             Debug.LogError("Forcing " + gameObject.name + " to back to (0, 0)");
