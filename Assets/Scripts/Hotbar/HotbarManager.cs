@@ -18,12 +18,18 @@ public class HotbarManager : MonoBehaviour
     private GameObject slotSelector;
     private int selectedSlot;
     // Start is called before the first frame update
+
+    [SerializeField] //for debug purposes, TODO remove
+    private ResourceManager resourceManager;
+
     void Start()
     {
         hotbarElements = new List<HotbarElement>();
         hotbarSlots = new List<GameObject>();
         selectedSlot = 0;
         UpdateLists();
+
+        //find resourcce
     }
 
     // Update is called once per frame
