@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class LaneManager : MonoBehaviour
 {
+    public static LaneManager Instance { get; private set; }
+
     [SerializeField] 
     private GameObject lanePrefab;
     [SerializeField]
@@ -39,6 +41,21 @@ public class LaneManager : MonoBehaviour
         lanes = new List<GameObject>();
         GenerateLanes();
     }
+
+    void Awake()
+    {
+        // Singleton pattern, only one instance of this class should exist
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+
 
     // Update is called once per frame
     void Update()
