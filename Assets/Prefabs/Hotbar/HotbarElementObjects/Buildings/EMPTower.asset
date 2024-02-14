@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
+  m_Name: EMPTower
+  m_EditorClassIdentifier: 
+  slotType: Building
+  elementName: EMP Tower
+  deployPrefab: {fileID: 4944663399310364834, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
+  cost: 1
+  cooldown: 1
+  icon: {fileID: -1105090329, guid: 6fedae0289725074e98f81cd9301494c, type: 3}
