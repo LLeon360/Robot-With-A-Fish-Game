@@ -117,10 +117,13 @@ public class PlayerController : MonoBehaviour
                     //deploy
                     GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
                     targetTileScript.SetBuilding(newBuilding);
+                    newBuilding.transform.SetParent(targetTile.transform);
                 }
                 else if(currentSelectionObject.slotType == "Unit") {
                     //deploy
                     GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
+                    GameObject lane = laneManager.GetLane(currentLane);
+                    newUnit.transform.SetParent(lane.transform);
                 }
 
                 //set next use

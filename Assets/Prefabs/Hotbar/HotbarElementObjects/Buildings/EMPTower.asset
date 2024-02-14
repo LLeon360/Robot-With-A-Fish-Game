@@ -16,5 +16,5 @@ MonoBehaviour:
   elementName: EMP Tower
   deployPrefab: {fileID: 4944663399310364834, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
   cost: 1
-  cooldown: 1
+  cooldown: 0
   icon: {fileID: -1105090329, guid: 6fedae0289725074e98f81cd9301494c, type: 3}
