@@ -74,62 +74,64 @@ public class PlayerController : MonoBehaviour
      * Activates when the player presses the action button, usually to place the current selection
      */
     public void OnAction(InputAction.CallbackContext ctx) {
-        HotbarElement currentSelection = hotbarManager.GetSelectedElement();
-        HotbarElementObject currentSelectionObject = currentSelection.GetHotbarElementObject();
-        TileScript targetTileScript = targetTile.GetComponent<TileScript>();
+        if(ctx.started) {
+            HotbarElement currentSelection = hotbarManager.GetSelectedElement();
+            HotbarElementObject currentSelectionObject = currentSelection.GetHotbarElementObject();
+            TileScript targetTileScript = targetTile.GetComponent<TileScript>();
 
-        //check for nulls
-        if(currentSelection == null) {
-            Debug.LogError("Player " + playerNum + " tried to place a null selection");
-            return;
-        }
-        if(currentSelectionObject == null) {
-            Debug.LogError("Player " + playerNum + " tried to place a null selection object");
-            return;
-        }
-        if(targetTile == null) {
-            Debug.LogError("Player " + playerNum + " tried to place on a null tile");
-            return;
-        }
-        if(targetTileScript == null) {
-            Debug.LogError("Player " + playerNum + " tried to place on a tile with a null TileScript");
-            return;
-        }
+            //check for nulls
+            if(currentSelection == null) {
+                Debug.LogError("Player " + playerNum + " tried to place a null selection");
+                return;
+            }
+            if(currentSelectionObject == null) {
+                Debug.LogError("Player " + playerNum + " tried to place a null selection object");
+                return;
+            }
+            if(targetTile == null) {
+                Debug.LogError("Player " + playerNum + " tried to place on a null tile");
+                return;
+            }
+            if(targetTileScript == null) {
+                Debug.LogError("Player " + playerNum + " tried to place on a tile with a null TileScript");
+                return;
+            }
 
-        //check if player is on their half of the map
-        if(playerNum == 0 && currentTile >= laneManager.laneLength/2) {
-            return;
-        }
-        if(playerNum == 1 && currentTile < laneManager.laneLength/2) {
-            return;
-        }
+            //check if player is on their half of the map
+            if(playerNum == 0 && currentTile >= laneManager.laneLength/2) {
+                return;
+            }
+            if(playerNum == 1 && currentTile < laneManager.laneLength/2) {
+                return;
+            }
 
-        //check if nextUse is ready
-        if(currentSelection.IsUsable()) {
-            //check if player can afford
-            if(ResourceManager.Instance.CanAfford(currentSelectionObject.cost, playerNum)) {
-                //if is building
-                if(currentSelectionObject.slotType == "Building") {
-                    if(!targetTileScript.IsEmpty()) {
-                        Debug.Log("Player " + playerNum + " tried to build on a non-empty tile at Lane " + currentLane + " Tile " + currentTile);
-                        return;
+            //check if nextUse is ready
+            if(currentSelection.IsUsable()) {
+                //check if player can afford
+                if(ResourceManager.Instance.CanAfford(currentSelectionObject.cost, playerNum)) {
+                    //if is building
+                    if(currentSelectionObject.slotType == "Building") {
+                        if(!targetTileScript.IsEmpty()) {
+                            Debug.Log("Player " + playerNum + " tried to build on a non-empty tile at Lane " + currentLane + " Tile " + currentTile);
+                            return;
+                        }
+                        //deploy
+                        GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
+                        targetTileScript.SetBuilding(newBuilding);
+                        newBuilding.transform.SetParent(targetTile.transform);
                     }
-                    //deploy
-                    GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
-                    targetTileScript.SetBuilding(newBuilding);
-                    newBuilding.transform.SetParent(targetTile.transform);
-                }
-                else if(currentSelectionObject.slotType == "Unit") {
-                    //deploy
-                    GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
-                    GameObject lane = laneManager.GetLane(currentLane);
-                    newUnit.transform.SetParent(lane.transform);
-                }
+                    else if(currentSelectionObject.slotType == "Unit") {
+                        //deploy
+                        GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
+                        GameObject lane = laneManager.GetLane(currentLane);
+                        newUnit.transform.SetParent(lane.transform);
+                    }
 
-                //set next use
-                currentSelection.UpdateNextUsableTime();
-                //deduct cost
-                ResourceManager.Instance.RemoveMoney(currentSelectionObject.cost, playerNum);
+                    //set next use
+                    currentSelection.UpdateNextUsableTime();
+                    //deduct cost
+                    ResourceManager.Instance.RemoveMoney(currentSelectionObject.cost, playerNum);
+                }
             }
         }
     }

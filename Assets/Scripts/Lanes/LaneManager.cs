@@ -92,12 +92,13 @@ public class LaneManager : MonoBehaviour
             // float offset = screenHeight * (-0.5f + (i+1f)/(_laneCount+1)); // this is formula to have gaps and split screen height
             float offset = i - _laneCount/2;
             GameObject lane = Instantiate(lanePrefab, Vector3.zero, Quaternion.identity);
-
+            
             lanes.Add(lane);
 
             lane.GetComponent<LaneScript>().laneLength = laneLength;
             lane.transform.SetParent(this.transform);
             lane.transform.localPosition = new Vector3(0, offset, 0);
+            lane.name = "Lane " + i;
         }
     }
     
