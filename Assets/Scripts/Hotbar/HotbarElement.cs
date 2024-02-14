@@ -13,13 +13,24 @@ public class HotbarElement {
         this.nextUsableTime = 0f;
     }
 
-    public void SetNextUsableTime()
+    public void UpdateNextUsableTime()
     {
         nextUsableTime = Time.time + hotbarElementObject.cooldown;
     }
 
-    public bool isUsable()
+    public bool IsUsable()
     {
         return Time.time > nextUsableTime;
     }
+
+    public void ResetCooldown()
+    {
+        nextUsableTime = 0f;
+    }
+
+    public HotbarElementObject GetHotbarElementObject()
+    {
+        return hotbarElementObject;
+    }
+
 }

@@ -89,7 +89,8 @@ public class LaneManager : MonoBehaviour
 
         for (int i = 0; i < _laneCount; i++)
         {
-            float offset = screenHeight * (-0.5f + (i+1f)/(_laneCount+1));
+            // float offset = screenHeight * (-0.5f + (i+1f)/(_laneCount+1)); // this is formula to have gaps and split screen height
+            float offset = i - _laneCount/2;
             GameObject lane = Instantiate(lanePrefab, Vector3.zero, Quaternion.identity);
 
             lanes.Add(lane);

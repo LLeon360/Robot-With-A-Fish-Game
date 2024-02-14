@@ -17,19 +17,15 @@ public class HotbarManager : MonoBehaviour
     [SerializeField]
     private GameObject slotSelector;
     private int selectedSlot;
+
     // Start is called before the first frame update
-
-    [SerializeField] //for debug purposes, TODO remove
-    private ResourceManager resourceManager;
-
+    
     void Start()
     {
         hotbarElements = new List<HotbarElement>();
         hotbarSlots = new List<GameObject>();
         selectedSlot = 0;
         UpdateLists();
-
-        //find resourcce
     }
 
     // Update is called once per frame
@@ -119,5 +115,9 @@ public class HotbarManager : MonoBehaviour
         Vector3 targetPosition = new Vector3(hotbarSlotWidth * selectedSlot, 0, 0);
         slotSelectorRectTransform.localPosition = Vector2.Lerp(slotSelectorRectTransform.localPosition, targetPosition, 
         Time.deltaTime * 15);
+    }
+
+    public HotbarElement GetSelectedElement() {
+        return hotbarElements[selectedSlot];
     }
 }

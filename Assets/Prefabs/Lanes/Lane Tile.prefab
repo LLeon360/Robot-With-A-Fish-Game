@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3689689290314416893}
   - component: {fileID: 5029469096180940711}
+  - component: {fileID: 1379606864480636744}
   m_Layer: 0
   m_Name: Lane Tile
   m_TagString: Untagged
@@ -84,3 +85,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1379606864480636744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3424515558232584336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94153e76146f0be45a934e0e363969ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  building: {fileID: 0}
+  tileModifier: {fileID: 0}
