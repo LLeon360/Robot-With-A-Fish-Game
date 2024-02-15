@@ -164,10 +164,11 @@ public class PlayerController : MonoBehaviour
 
     void MoveY(float direction) {
         int laneCount = laneManager.laneCount;
+        // lanes count down to align with sorting order, realize this might be not intuitive for movement
         if(direction < 0) {
-            currentLane = (currentLane - 1 + laneCount) % laneCount; //strictly positive
-        } else if(direction > 0) {
             currentLane = (currentLane + 1) % laneCount;
+        } else if(direction > 0) {
+            currentLane = (currentLane - 1 + laneCount) % laneCount; //strictly positive
         }
     }
 
