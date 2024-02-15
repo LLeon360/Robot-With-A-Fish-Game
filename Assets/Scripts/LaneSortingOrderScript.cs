@@ -45,11 +45,11 @@ public class LaneSortingOrderScript : MonoBehaviour
             case "Unit":
                 offset = 1;
                 break;
+            default:
+                Debug.LogError("Unknown type: " + unitInfoScript.type + " in LaneSortingOrderScript of " + gameObject.name);
+                break;
         }
 
-        if(unitInfoScript != null)
-        {
-            sortingGroup.sortingOrder = 5 * laneIndex + offset;
-        }
+        sortingGroup.sortingOrder = 2 * laneIndex + offset;
     }
 }
