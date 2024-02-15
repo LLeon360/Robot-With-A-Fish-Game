@@ -21,7 +21,7 @@ public class LaneScript : MonoBehaviour
     }
     // keep track of the lane index
     [SerializeField]
-    private int laneIndex;
+    public int laneIndex { get; set; }
 
 
     private List<GameObject> tiles;

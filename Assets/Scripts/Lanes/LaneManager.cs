@@ -97,6 +97,7 @@ public class LaneManager : MonoBehaviour
             lanes.Add(lane);
 
             lane.GetComponent<LaneScript>().laneLength = laneLength;
+            lane.GetComponent<LaneScript>().laneIndex = i;
             lane.transform.SetParent(this.transform);
             lane.transform.localPosition = new Vector3(0, offset, 0);
             lane.name = "Lane " + i;

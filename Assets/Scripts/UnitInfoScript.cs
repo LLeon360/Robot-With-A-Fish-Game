@@ -6,10 +6,14 @@ public class UnitInfoScript : MonoBehaviour
 {
     
     [SerializeField]
-    private int player;
+    public int player;
     
     [SerializeField]
-    private int lane;
+    public int lane;
+    
+    [SerializeField]
+    [StringInList("Building", "Unit")]
+    public string type;
 
     // Start is called before the first frame update
     void Start()
@@ -21,16 +25,5 @@ public class UnitInfoScript : MonoBehaviour
     void Update()
     {
 
-    }
-
-    //setters
-    public void SetPlayer(int player)
-    {
-        this.player = player;
-    }
-
-    public void SetLane(int lane)
-    {
-        this.lane = lane;
     }
 }

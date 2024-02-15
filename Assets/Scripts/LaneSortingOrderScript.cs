@@ -29,6 +29,27 @@ public class LaneSortingOrderScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateSortingOrder();
+    }
+
+    void UpdateSortingOrder()
+    {
+        int laneIndex = transform.parent.parent.GetComponent<LaneScript>().laneIndex;
+        //if is not a building, increment sorting order by 1
+        int offset = 0;
+        switch(unitInfoScript.type)
+        {
+            case "Building":
+                offset = 0;
+                break;
+            case "Unit":
+                offset = 1;
+                break;
+        }
+
+        if(unitInfoScript != null)
+        {
+            sortingGroup.sortingOrder = 5 * laneIndex + offset;
+        }
     }
 }

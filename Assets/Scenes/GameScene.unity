@@ -189,8 +189,31 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6775372792858774172, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 233763121}
   m_SourcePrefab: {fileID: 100100000, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
+--- !u!1 &233763120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6775372792858774172, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
+  m_PrefabInstance: {fileID: 233763119}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &233763121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233763120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0763358a2e831547ad804ae4a73e69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 0
+  lane: 0
+  type: 
 --- !u!114 &328617659 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}

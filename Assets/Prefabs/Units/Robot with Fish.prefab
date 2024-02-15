@@ -71,8 +71,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2107996295
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: -4388444, guid: d9adc37a1dbe76f46851a084010cf422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,8 +155,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2107996295
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 4
   m_Sprite: {fileID: 1356200484, guid: d9adc37a1dbe76f46851a084010cf422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -239,8 +239,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2107996295
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 2096184747, guid: d9adc37a1dbe76f46851a084010cf422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -349,6 +349,8 @@ GameObject:
   - component: {fileID: 6791490960701942571}
   - component: {fileID: 6244349509533067240}
   - component: {fileID: 8382951965855962509}
+  - component: {fileID: 5565866801974606783}
+  - component: {fileID: 7793119148122800131}
   m_Layer: 0
   m_Name: Robot with Fish
   m_TagString: Untagged
@@ -404,10 +406,39 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6775372792858774172}
   m_Enabled: 1
-  m_SortingLayerID: 2107996295
-  m_SortingLayer: 4
+  m_SortingLayerID: -1236544773
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_SortAtRoot: 0
+--- !u!114 &5565866801974606783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775372792858774172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0763358a2e831547ad804ae4a73e69e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: 0
+  lane: 0
+  type: Unit
+--- !u!114 &7793119148122800131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6775372792858774172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d8d9177b9909e419fbf51095f8ca2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingGroup: {fileID: 0}
+  unitInfoScript: {fileID: 0}
 --- !u!1 &6831290624966264160
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,8 +509,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2107996295
-  m_SortingLayer: 4
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: -4388444, guid: d9adc37a1dbe76f46851a084010cf422, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

@@ -148,11 +148,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.49
+      value: -10.07
       objectReference: {fileID: 0}
     - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -358,11 +358,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689689290314416893, guid: 9cbccb5ba5c87a1449046fb1148ee6dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.49
+      value: -10.07
       objectReference: {fileID: 0}
     - target: {fileID: 3689689290314416893, guid: 9cbccb5ba5c87a1449046fb1148ee6dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.22
+      value: 0.019999996
       objectReference: {fileID: 0}
     - target: {fileID: 3689689290314416893, guid: 9cbccb5ba5c87a1449046fb1148ee6dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -493,20 +493,12 @@ PrefabInstance:
       value: EMP Tower
       objectReference: {fileID: 0}
     - target: {fileID: 5062062537896117807, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5062062537896117807, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5062062537896117807, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.5
+      value: -10.08
       objectReference: {fileID: 0}
     - target: {fileID: 5062062537896117807, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.03
+      value: -0.23
       objectReference: {fileID: 0}
     - target: {fileID: 5062062537896117807, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
       propertyPath: m_LocalPosition.z
