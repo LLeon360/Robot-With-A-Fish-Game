@@ -7,6 +7,7 @@ public class LaneScript : MonoBehaviour
 
     [SerializeField]
     private GameObject tilePrefab;
+
     private int _laneLength = 10;
 
     public int laneLength
@@ -18,14 +19,31 @@ public class LaneScript : MonoBehaviour
             _laneLength = value;
         }
     }
+    // keep track of the lane index
+    [SerializeField]
+    private int laneIndex;
+
 
     private List<GameObject> tiles;
     [SerializeField]
     private List<Sprite> tileSprites;
 
+    //child references for tiles, buildings, and units
+    [SerializeField]
+    private GameObject tileParent;
+    [SerializeField]
+    private GameObject buildingParent;
+    [SerializeField]
+    private GameObject unitParent;
+
     // Start is called before the first frame update
     void Start()
     {
+        //get child references
+        tileParent = transform.Find("Tiles").gameObject;
+        buildingParent = transform.Find("Buildings").gameObject;
+        unitParent = transform.Find("Units").gameObject;
+
         tiles = new List<GameObject>();
         GenerateLane();
     }
@@ -59,7 +77,7 @@ public class LaneScript : MonoBehaviour
             float offset = i - laneLength / 2f + 0.5f;
             GameObject tile = Instantiate(tilePrefab, Vector3.zero, Quaternion.identity);
             tiles.Add(tile);
-            tile.transform.SetParent(this.transform);
+            tile.transform.SetParent(tileParent.transform);
             tile.transform.localPosition = new Vector3(offset, 0, 0);
             tile.name = "Tile " + i;
 

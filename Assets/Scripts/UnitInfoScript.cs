@@ -11,9 +11,6 @@ public class UnitInfoScript : MonoBehaviour
     [SerializeField]
     private int lane;
 
-    [SerializeField]
-    private HotbarElementObject data;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -35,10 +32,5 @@ public class UnitInfoScript : MonoBehaviour
     public void SetLane(int lane)
     {
         this.lane = lane;
-    }
-
-    public void SetData(HotbarElementObject data)
-    {
-        this.data = data;
     }
 }
