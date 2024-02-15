@@ -78,6 +78,7 @@ public class PlayerController : MonoBehaviour
             HotbarElement currentSelection = hotbarManager.GetSelectedElement();
             HotbarElementObject currentSelectionObject = currentSelection.GetHotbarElementObject();
             TileScript targetTileScript = targetTile.GetComponent<TileScript>();
+            LaneScript laneScript = laneManager.GetLane(currentLane).GetComponent<LaneScript>();
 
             //check for nulls
             if(currentSelection == null) {
@@ -118,13 +119,13 @@ public class PlayerController : MonoBehaviour
                         //deploy
                         GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
                         targetTileScript.SetBuilding(newBuilding);
-                        newBuilding.transform.SetParent(targetTile.transform);
+                        newBuilding.transform.SetParent(laneScript.buildingParent.transform);
                     }
                     else if(currentSelectionObject.slotType == "Unit") {
                         //deploy
                         GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
                         GameObject lane = laneManager.GetLane(currentLane);
-                        newUnit.transform.SetParent(lane.transform);
+                        newUnit.transform.SetParent(laneScript.unitParent.transform);
                     }
 
                     //set next use

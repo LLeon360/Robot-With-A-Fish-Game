@@ -30,11 +30,11 @@ public class LaneScript : MonoBehaviour
 
     //child references for tiles, buildings, and units
     [SerializeField]
-    private GameObject tileParent;
+    public GameObject tileParent {get; private set;}
     [SerializeField]
-    private GameObject buildingParent;
+    public GameObject buildingParent {get; private set;}
     [SerializeField]
-    private GameObject unitParent;
+    public GameObject unitParent {get; private set;}
 
     // Start is called before the first frame update
     void Start()
