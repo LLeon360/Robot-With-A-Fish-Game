@@ -38,6 +38,11 @@ public class LaneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        SetupLanes();
+    }
+
+    void SetupLanes()
+    {
         lanes = new List<GameObject>();
         GenerateLanes();
     }
@@ -48,11 +53,11 @@ public class LaneManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(Instance);
+            Instance = this;
         }
     }
 
