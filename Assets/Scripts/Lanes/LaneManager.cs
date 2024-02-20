@@ -10,6 +10,9 @@ public class LaneManager : MonoBehaviour
     private GameObject lanePrefab;
     [SerializeField]
     private int _laneCount = 3;
+    [SerializeField]
+    private GameObject towerPrefab;
+
     public int laneCount
     {
         get { return _laneCount; }
@@ -40,11 +43,13 @@ public class LaneManager : MonoBehaviour
     {
         SetupLanes();
     }
-
     void SetupLanes()
     {
         lanes = new List<GameObject>();
         GenerateLanes();
+
+        // Start a coroutine to place towers after a frame, give time to initialize lanes
+        StartCoroutine(PlaceTowersAfterFrame());
     }
 
     void Awake()
@@ -65,13 +70,12 @@ public class LaneManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("DEBUG: REMOVE THIS, Pressing Space will regenerate all lanes\nKNOWN trivial error associated with regenerating lanes (player will attempt to fetch tiles as tiles are being cleared causing null reference error) this will only happen using this debug feature");
-        // TODO remove this, for testing purposes generate lanes on update, this isn't necessary
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            ClearLanes();
-            GenerateLanes();
-        }
+        // Debug.Log("DEBUG: REMOVE THIS, Pressing Space will regenerate all lanes\nKNOWN trivial error associated with regenerating lanes (player will attempt to fetch tiles as tiles are being cleared causing null reference error) this will only happen using this debug feature");
+        // // TODO remove this, for testing purposes generate lanes on update, this isn't necessary
+        // if(Input.GetKeyDown(KeyCode.Space))
+        // {
+        //     SetupLanes();
+        // }
     }
 
     /**
@@ -98,14 +102,14 @@ public class LaneManager : MonoBehaviour
             // build lanes from top to bottom so lane index aligns with sorting order
             float offset = _laneCount/2 - i; 
             GameObject lane = Instantiate(lanePrefab, Vector3.zero, Quaternion.identity);
-            
-            lanes.Add(lane);
 
             lane.GetComponent<LaneScript>().laneLength = laneLength;
             lane.GetComponent<LaneScript>().laneIndex = i;
             lane.transform.SetParent(this.transform);
             lane.transform.localPosition = new Vector3(0, offset, 0);
             lane.name = "Lane " + i;
+            
+            lanes.Add(lane);
         }
     }
     
@@ -124,6 +128,34 @@ public class LaneManager : MonoBehaviour
     public GameObject GetTile(int laneIndex, int tileIndex)
     {
         return GetLane(laneIndex).GetComponent<LaneScript>().GetTile(tileIndex);
+    }
+
+    // place towers at the start and end of each lane
+    void PlaceTowers() {
+        foreach (GameObject lane in lanes)
+        {
+            LaneScript laneScript = lane.GetComponent<LaneScript>();
+
+            GameObject startTile = laneScript.GetTile(0);
+            GameObject endTile = laneScript.GetTile(laneScript.laneLength-1);
+
+            GameObject startTower = Instantiate(towerPrefab, startTile.transform.position, Quaternion.identity);
+            GameObject endTower = Instantiate(towerPrefab, endTile.transform.position, Quaternion.identity);
+
+            startTile.GetComponent<TileScript>().SetBuilding(startTower);
+            endTile.GetComponent<TileScript>().SetBuilding(endTower);
+
+            startTower.transform.SetParent(laneScript.buildingParent.transform);
+            endTower.transform.SetParent(laneScript.buildingParent.transform);
+        }
+    }    
+    IEnumerator PlaceTowersAfterFrame()
+    {
+        // Wait for the next frame
+        yield return null;
+
+        // Now place the towers
+        PlaceTowers();
     }
 
 }

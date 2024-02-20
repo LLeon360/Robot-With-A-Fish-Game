@@ -31,12 +31,12 @@ public class HotbarManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("DEBUG: REMOVE THIS, Pressing Space will rerender all hotbar elements");
-        if(Input.GetKeyDown(KeyCode.Space)) //testing purposes, TODO remove
-        {
-            //rerender all
-            UpdateLists();
-        }
+        // Debug.Log("DEBUG: REMOVE THIS, Pressing Space will rerender all hotbar elements");
+        // if(Input.GetKeyDown(KeyCode.Space)) //testing purposes, TODO remove
+        // {
+        //     //rerender all
+        //     UpdateLists();
+        // }
         UpdateSelection();
     }
 

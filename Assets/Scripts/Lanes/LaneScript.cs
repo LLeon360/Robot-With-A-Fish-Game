@@ -23,7 +23,7 @@ public class LaneScript : MonoBehaviour
     [SerializeField]
     public int laneIndex { get; set; }
 
-
+    [SerializeField] //for testing purposes, shouldn't need to assign through inspector
     private List<GameObject> tiles;
     [SerializeField]
     private List<Sprite> tileSprites;
@@ -76,7 +76,6 @@ public class LaneScript : MonoBehaviour
         {
             float offset = i - laneLength / 2f + 0.5f;
             GameObject tile = Instantiate(tilePrefab, Vector3.zero, Quaternion.identity);
-            tiles.Add(tile);
             tile.transform.SetParent(tileParent.transform);
             tile.transform.localPosition = new Vector3(offset, 0, 0);
             tile.name = "Tile " + i;
@@ -85,13 +84,15 @@ public class LaneScript : MonoBehaviour
             tile.GetComponent<SpriteRenderer>().sprite = tileSprites[Random.Range(0, tileSprites.Count)];
             //set sorting layer to tiles
             tile.GetComponent<SpriteRenderer>().sortingLayerName = "Tiles";    
+
+            tiles.Add(tile);
         }
     }
 
     // get the tile at the index
     public GameObject GetTile(int index) {
         if(index < 0 || index >= tiles.Count) {
-            Debug.LogError("Index out of range");
+            Debug.LogError("Index out of range " + index + " for lane " + laneIndex + " with " + tiles.Count + " tiles.");
             return null;
         }
         return tiles[index];
