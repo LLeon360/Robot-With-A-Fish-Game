@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 
+[RequireComponent(typeof(SortingGroup))]
+[RequireComponent(typeof(UnitInfoScript))]
 public class LaneSortingOrderScript : MonoBehaviour
 {
     [SerializeField]
@@ -34,7 +36,7 @@ public class LaneSortingOrderScript : MonoBehaviour
 
     void UpdateSortingOrder()
     {
-        int laneIndex = transform.parent.parent.GetComponent<LaneScript>().laneIndex;
+        int laneIndex = unitInfoScript.GetLane();
         //if is not a building, increment sorting order by 1
         int offset = 0;
         switch(unitInfoScript.type)
