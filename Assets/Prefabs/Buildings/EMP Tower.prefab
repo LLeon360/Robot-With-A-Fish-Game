@@ -97,8 +97,8 @@ GameObject:
   - component: {fileID: 6811220117913177971}
   - component: {fileID: 6915815964884700071}
   - component: {fileID: -5397320583628403316}
-  - component: {fileID: 8637397281977112415}
   - component: {fileID: 6241699516766393770}
+  - component: {fileID: 4492244154194430654}
   m_Layer: 3
   m_Name: EMP Tower
   m_TagString: Untagged
@@ -183,20 +183,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 30
   currentHealth: 30
---- !u!114 &8637397281977112415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4944663399310364834}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7d8d9177b9909e419fbf51095f8ca2b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sortingGroup: {fileID: 0}
-  unitInfoScript: {fileID: 0}
 --- !u!61 &6241699516766393770
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,6 +228,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &4492244154194430654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944663399310364834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7d8d9177b9909e419fbf51095f8ca2b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingGroup: {fileID: 0}
+  unitInfoScript: {fileID: 0}
 --- !u!1 &6666056402366162250
 GameObject:
   m_ObjectHideFlags: 0
