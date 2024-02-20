@@ -147,6 +147,9 @@ public class LaneManager : MonoBehaviour
 
             startTower.transform.SetParent(laneScript.buildingParent.transform);
             endTower.transform.SetParent(laneScript.buildingParent.transform);
+
+            startTower.GetComponent<UnitInfoScript>().player = 0;
+            endTower.GetComponent<UnitInfoScript>().player = 1;
         }
     }    
     IEnumerator PlaceTowersAfterFrame()
