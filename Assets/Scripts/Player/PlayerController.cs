@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.InputSystem;
+
 public class PlayerController : MonoBehaviour
 {
     //lane manager, need it to snap to lanes and stay in grid
@@ -120,12 +121,20 @@ public class PlayerController : MonoBehaviour
                         GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
                         targetTileScript.SetBuilding(newBuilding);
                         newBuilding.transform.SetParent(laneScript.buildingParent.transform);
+
+                        //set owner
+                        UnitInfoScript unitInfo = newBuilding.GetComponent<UnitInfoScript>();
+                        unitInfo.player = playerNum;
                     }
                     else if(currentSelectionObject.slotType == "Unit") {
                         //deploy
                         GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
                         GameObject lane = laneManager.GetLane(currentLane);
                         newUnit.transform.SetParent(laneScript.unitParent.transform);
+
+                        //set owner
+                        UnitInfoScript unitInfo = newUnit.GetComponent<UnitInfoScript>();
+                        unitInfo.player = playerNum;
                     }
 
                     //set next use
