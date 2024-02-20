@@ -267,90 +267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e3a8133b8544f45933598adcddbeee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &233763119
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6775372792858774172, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_Name
-      value: Robot with Fish
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.03
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6791490960701942571, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6775372792858774172, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 233763121}
-  m_SourcePrefab: {fileID: 100100000, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
---- !u!1 &233763120 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6775372792858774172, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
-  m_PrefabInstance: {fileID: 233763119}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &233763121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 233763120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b0763358a2e831547ad804ae4a73e69e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: 0
-  lane: 0
-  type: Building
 --- !u!1001 &273944373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1453,6 +1369,10 @@ PrefabInstance:
       value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 3805636078499947317, guid: e36d5bd31d14af745b5530d55e1fd808, type: 3}
+      propertyPath: towerPrefab
+      value: 
+      objectReference: {fileID: 4944663399310364834, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
+    - target: {fileID: 3805636078499947317, guid: e36d5bd31d14af745b5530d55e1fd808, type: 3}
       propertyPath: screenHeight
       value: 10
       objectReference: {fileID: 0}
@@ -1711,6 +1631,5 @@ SceneRoots:
   - {fileID: 813236185}
   - {fileID: 519420032}
   - {fileID: 387125212}
-  - {fileID: 233763119}
   - {fileID: 1377673106}
   - {fileID: 273944373}
