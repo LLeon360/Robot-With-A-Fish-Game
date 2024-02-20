@@ -81,7 +81,7 @@ public class LaneScript : MonoBehaviour
             tile.name = "Tile " + i;
 
             //randomly pick a tile sprite
-            tile.GetComponent<SpriteRenderer>().sprite = tileSprites[Random.Range(0, tileSprites.Count)];
+            tile.GetComponent<SpriteRenderer>().sprite = tileSprites[(i+(laneIndex%2))%4];
             //set sorting layer to tiles
             tile.GetComponent<SpriteRenderer>().sortingLayerName = "Tiles";    
 

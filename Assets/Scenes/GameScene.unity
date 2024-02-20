@@ -1361,6 +1361,10 @@ PrefabInstance:
       value: Lane Manager
       objectReference: {fileID: 0}
     - target: {fileID: 3805636078499947317, guid: e36d5bd31d14af745b5530d55e1fd808, type: 3}
+      propertyPath: laneWidth
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805636078499947317, guid: e36d5bd31d14af745b5530d55e1fd808, type: 3}
       propertyPath: _laneCount
       value: 5
       objectReference: {fileID: 0}

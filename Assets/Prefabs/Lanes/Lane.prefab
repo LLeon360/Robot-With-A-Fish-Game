@@ -79,11 +79,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tilePrefab: {fileID: 3424515558232584336, guid: 9cbccb5ba5c87a1449046fb1148ee6dc, type: 3}
+  tiles: []
   tileSprites:
-  - {fileID: 1699860297, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
-  - {fileID: 924569259, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
-  - {fileID: -701751368, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
-  - {fileID: 601888533, guid: f437e639f0c50f14b8456bfb1f26c913, type: 3}
+  - {fileID: -83323342, guid: b0d3813eb535428418b0ad068a6c79af, type: 3}
+  - {fileID: -1646626878, guid: b0d3813eb535428418b0ad068a6c79af, type: 3}
+  - {fileID: 1087968698, guid: b0d3813eb535428418b0ad068a6c79af, type: 3}
+  - {fileID: 1093889132, guid: b0d3813eb535428418b0ad068a6c79af, type: 3}
 --- !u!1 &5489838736201433290
 GameObject:
   m_ObjectHideFlags: 0

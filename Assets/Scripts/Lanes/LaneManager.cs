@@ -36,6 +36,8 @@ public class LaneManager : MonoBehaviour
     }
     [SerializeField]
     private float screenHeight = 10f;
+    [SerializeField]
+    private float laneWidth = 1f;
     private List<GameObject> lanes;
 
     // Start is called before the first frame update
@@ -94,13 +96,13 @@ public class LaneManager : MonoBehaviour
     */
     void GenerateLanes()
     {
-        float laneWidth = (screenHeight)/(_laneCount-1);
+        // float laneWidth = (screenHeight)/(_laneCount-1);
 
         for (int i = 0; i < _laneCount; i++)
         {
             // float offset = screenHeight * (-0.5f + (i+1f)/(_laneCount+1)); // this is formula to have gaps and split screen height
             // build lanes from top to bottom so lane index aligns with sorting order
-            float offset = _laneCount/2 - i; 
+            float offset = (_laneCount/2 - i) * laneWidth; 
             GameObject lane = Instantiate(lanePrefab, Vector3.zero, Quaternion.identity);
 
             lane.GetComponent<LaneScript>().laneLength = laneLength;
