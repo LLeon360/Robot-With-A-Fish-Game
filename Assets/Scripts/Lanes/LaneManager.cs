@@ -141,8 +141,8 @@ public class LaneManager : MonoBehaviour
             GameObject startTile = laneScript.GetTile(0);
             GameObject endTile = laneScript.GetTile(laneScript.laneLength-1);
 
-            GameObject startTower = Instantiate(towerPrefab, startTile.transform.position, Quaternion.identity);
-            GameObject endTower = Instantiate(towerPrefab, endTile.transform.position, Quaternion.identity);
+            GameObject startTower = Instantiate(towerPrefab, startTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
+            GameObject endTower = Instantiate(towerPrefab, endTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
 
             startTile.GetComponent<TileScript>().SetBuilding(startTower);
             endTile.GetComponent<TileScript>().SetBuilding(endTower);

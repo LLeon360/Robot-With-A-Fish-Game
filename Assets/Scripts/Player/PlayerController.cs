@@ -118,7 +118,7 @@ public class PlayerController : MonoBehaviour
                             return;
                         }
                         //deploy
-                        GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
+                        GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
                         targetTileScript.SetBuilding(newBuilding);
                         newBuilding.transform.SetParent(laneScript.buildingParent.transform);
 
@@ -128,7 +128,7 @@ public class PlayerController : MonoBehaviour
                     }
                     else if(currentSelectionObject.slotType == "Unit") {
                         //deploy
-                        GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position, Quaternion.identity);
+                        GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
                         GameObject lane = laneManager.GetLane(currentLane);
                         newUnit.transform.SetParent(laneScript.unitParent.transform);
 
