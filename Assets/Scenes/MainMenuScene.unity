@@ -1102,7 +1102,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1694595620
 Canvas:
   m_ObjectHideFlags: 0
@@ -1112,8 +1112,8 @@ Canvas:
   m_GameObject: {fileID: 1694595617}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 2
-  m_Camera: {fileID: 0}
+  m_RenderMode: 0
+  m_Camera: {fileID: 596604282}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -1135,7 +1135,7 @@ RectTransform:
   m_GameObject: {fileID: 1694595617}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.8775, y: 0.8775, z: 0.8775}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1081304068}
@@ -1146,9 +1146,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 351, y: 197.33333}
-  m_SizeDelta: {x: 800, y: 449.76257}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1846998065 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7194964737278147278, guid: 20369759bce79fb419d4c427f81e01f0, type: 3}
@@ -1647,7 +1647,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  lane: 0
   type: Building
 --- !u!210 &3859178921350806518
 SortingGroup:
@@ -1792,7 +1791,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: 0
-  lane: 0
   type: Unit
 --- !u!1 &5838632302921744595
 GameObject:
@@ -2243,7 +2241,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 1694595621}
   - {fileID: 60830954}
-  - {fileID: 6791490961541749710}
   - {fileID: 596604283}
-  - {fileID: 3263088117978231466}
   - {fileID: 808820910133897855}
+  - {fileID: 6791490961541749710}
+  - {fileID: 3263088117978231466}

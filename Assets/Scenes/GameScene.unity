@@ -1441,6 +1441,26 @@ PrefabInstance:
       propertyPath: laneManager
       value: 
       objectReference: {fileID: 221684873}
+    - target: {fileID: 4688963519113919074, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4cf02ed44311cba4e95bf97d5cd9e3f1, type: 3}
+    - target: {fileID: 4688963519113919074, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688963519113919074, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.79065365
+      objectReference: {fileID: 0}
+    - target: {fileID: 4688963519113919074, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4198113
+      objectReference: {fileID: 0}
+    - target: {fileID: 4730228977990161050, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4cf02ed44311cba4e95bf97d5cd9e3f1, type: 3}
     - target: {fileID: 7448644515566806996, guid: 40b6d05d544ac0d4da754dd9e5da605d, type: 3}
       propertyPath: m_RootOrder
       value: 1
