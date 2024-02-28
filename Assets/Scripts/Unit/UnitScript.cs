@@ -168,11 +168,11 @@ public class UnitScript : MonoBehaviour
                         continue;
                     }
                     //check that it is in front based on player number
-                    if (buildingInfo.player == 0) {
+                    if (unitInfo.player == 0) {
                         if (building.position.x < transform.position.x) {
                             continue;
                         }
-                    } else if (buildingInfo.player == 1) {
+                    } else if (unitInfo.player == 1) {
                         if (building.position.x > transform.position.x) {
                             continue;
                         }
