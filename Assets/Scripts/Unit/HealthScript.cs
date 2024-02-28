@@ -74,8 +74,8 @@ public class HealthScript : MonoBehaviour
     private void OnGUI()
     {
         //draw health bar
-        Vector2 targetpos = Camera.main.WorldToScreenPoint(transform.position);
-        GUI.Box(new Rect(targetpos.x - 25, Screen.height - targetpos.y - 40, 60, 20), currentHealth.ToString() + '/' + maxHealth.ToString());
+        Vector2 targetPos = Camera.main.WorldToScreenPoint(transform.position);
+        GUI.Box(new Rect(targetPos.x - 25, Screen.height - targetPos.y - 40, 60, 20), currentHealth.ToString() + '/' + maxHealth.ToString());
     }
 
     public void FlashWhite()
