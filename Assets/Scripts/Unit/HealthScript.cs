@@ -7,8 +7,6 @@ public class HealthScript : MonoBehaviour
     private int maxHealth;
     [SerializeField]
     private int currentHealth;
-
-    public Vector2 targetpos;
     public delegate void DeathAction(GameObject deadObject);
     public delegate void DamageAction(GameObject damagedObject, int damage);
 
@@ -75,7 +73,8 @@ public class HealthScript : MonoBehaviour
 
     private void OnGUI()
     {
-        targetpos = Camera.main.WorldToScreenPoint(transform.position);
+        //draw health bar
+        Vector2 targetpos = Camera.main.WorldToScreenPoint(transform.position);
         GUI.Box(new Rect(targetpos.x - 25, Screen.height - targetpos.y - 40, 60, 20), currentHealth.ToString() + '/' + maxHealth.ToString());
     }
 
