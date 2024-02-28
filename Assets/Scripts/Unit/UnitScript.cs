@@ -112,51 +112,84 @@ public class UnitScript : MonoBehaviour
         GameObject closestUnit = null;        
         GameObject thisLane = unitInfo.GetLane();
         Transform unitsInLane = thisLane.transform.Find("Units");
+        Transform buildingsInLane = thisLane.transform.Find("Buildings");
 
         //iterate through children of unitsInLane
-        foreach (Transform otherUnit in unitsInLane.transform) 
-        {
-            // Check if the collider belongs to a unit.
-            UnitInfoScript otherUnitInfo = otherUnit.GetComponent<UnitInfoScript>();
-            if (unitInfo != null)
+        if(!targetBuildingsOnly) {
+            foreach (Transform otherUnit in unitsInLane.transform) 
             {
-                if (targetBuildingsOnly && otherUnitInfo.type != "Building")
+                UnitInfoScript otherUnitInfo = otherUnit.GetComponent<UnitInfoScript>();
+                //null check, should not happen, only units should go in "Units" object
+                if (otherUnitInfo != null)
                 {
-                    continue;
-                }
-                //check same lane
-                if(unitInfo.GetLaneIndex() != otherUnitInfo.GetLaneIndex())
-                {
-                    continue;
-                }
-                //check if it's within range
-                if(Mathf.Abs(transform.position.x - otherUnitInfo.transform.position.x) > attackRange)
-                {
-                    continue;
-                }
-                //check that it is in front based on player number
-                if (unitInfo.player == 0) {
-                    if (otherUnit.position.x < transform.position.x) {
-                        continue;
-                    }
-                } else if (unitInfo.player == 1) {
-                    if (otherUnit.position.x > transform.position.x) {
-                        continue;
-                    }
-                }
-
-
-                // if unit info is different player
-                if(unitInfo.player != otherUnitInfo.player)
-                {
-                    if(Vector2.Distance(transform.position, otherUnitInfo.transform.position) < closestDistance)
+                    float distance = Mathf.Abs(transform.position.x - otherUnit.transform.position.x);
+                    //check if it's within range
+                    if(distance > attackRange)
                     {
-                        closestDistance = Vector2.Distance(transform.position, otherUnitInfo.transform.position);
-                        closestUnit = otherUnitInfo.gameObject;
+                        continue;
+                    }
+                    //check that it is in front based on player number
+                    if (unitInfo.player == 0) {
+                        if (otherUnit.position.x < transform.position.x) {
+                            continue;
+                        }
+                    } else if (unitInfo.player == 1) {
+                        if (otherUnit.position.x > transform.position.x) {
+                            continue;
+                        }
+                    }
+
+                    // if unit info is different player
+                    if(unitInfo.player != otherUnitInfo.player)
+                    {
+                        if(distance < closestDistance)
+                        {
+                            closestDistance = distance;
+                            closestUnit = otherUnitInfo.gameObject;
+                        }
                     }
                 }
             }
         }
+
+        //iterate through children of buildingsInLane
+        foreach (Transform building in buildingsInLane.transform) 
+            {
+                // Check if the collider belongs to a unit.
+                UnitInfoScript buildingInfo = building.GetComponent<UnitInfoScript>();
+                
+                //null check, should not happen, only units should go in "Units" object
+                if (buildingInfo != null)
+                {
+                    float distance = Mathf.Abs(transform.position.x - building.transform.position.x);
+                    //check if it's within range
+                    if(distance > attackRange)
+                    {
+                        continue;
+                    }
+                    //check that it is in front based on player number
+                    if (buildingInfo.player == 0) {
+                        if (building.position.x < transform.position.x) {
+                            continue;
+                        }
+                    } else if (buildingInfo.player == 1) {
+                        if (building.position.x > transform.position.x) {
+                            continue;
+                        }
+                    }
+
+                    // if unit info is different player
+                    if(unitInfo.player != buildingInfo.player)
+                    {
+                        if(distance < closestDistance)
+                        {
+                            closestDistance = distance;
+                            closestUnit = buildingInfo.gameObject;
+                        }
+                    }
+                }
+            }
+
         return closestUnit;
     }
 

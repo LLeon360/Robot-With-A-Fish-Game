@@ -64,9 +64,12 @@ public class TurretScript : MonoBehaviour
                     }
                 }
 
-                float distance = Vector3.Distance(unit.position, transform.position);
+                float distance = Mathf.Abs(transform.position.x - unit.transform.position.x);
+
                 if (distance < attackRange) {
                     state = "Attack";
+                    //only needs to find one unit to attack
+                    break;
                 }
             }
         }
