@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
-  m_Name: EMPTower
+  m_Name: PowerTower
   m_EditorClassIdentifier: 
   slotType: Building
-  elementName: EMP Tower
+  elementName: Power Tower
   deployPrefab: {fileID: 4944663399310364834, guid: 3e0daacf5b066ec47845a295e7cbaa1b, type: 3}
   cost: 1
   cooldown: 0
