@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 0e4071101380f1443beecdc2c6afcb10
+guid: 8a0824072c80a7d458cca6dd0569c4eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 500
+  spritePixelsToUnits: 200
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Front Smokestack
+      name: Smoke_0
       rect:
         serializedVersion: 2
-        x: 323
-        y: 536
-        width: 139
-        height: 351
+        x: 369
+        y: 778
+        width: 84
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2746660ee20003498dfa68da3ff1d7d
-      internalID: 500552782
+      spriteID: 302ce4e8dd4b88d499cad9ecec2ee678
+      internalID: 826688225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Back Smokestack
+      name: Smoke_1
       rect:
         serializedVersion: 2
-        x: 679
-        y: 606
-        width: 104
-        height: 244
+        x: 287
+        y: 494
+        width: 88
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 919db805cf124924d9b3b44bccb8730b
-      internalID: -1038457260
+      spriteID: 3c7b9062042e4724692993d56c53e4ff
+      internalID: 491901263
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Body
+      name: Smoke_2
       rect:
         serializedVersion: 2
-        x: 255
-        y: 51
-        width: 529
-        height: 434
+        x: 483
+        y: 555
+        width: 90
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b4b65c55fa786f4f9176b6aec62cacd
-      internalID: -968594978
+      spriteID: 37fa0955ce01bc4468256ac3961ef775
+      internalID: -1198437684
       vertices: []
       indices: 
       edges: []
@@ -196,9 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Back Smokestack: -1038457260
-      Body: -968594978
-      Front Smokestack: 500552782
+      Smoke_0: 826688225
+      Smoke_1: 491901263
+      Smoke_2: -1198437684
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
