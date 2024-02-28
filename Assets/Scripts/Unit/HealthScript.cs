@@ -8,6 +8,7 @@ public class HealthScript : MonoBehaviour
     [SerializeField]
     private int currentHealth;
 
+    public Vector2 targetpos;
     public delegate void DeathAction(GameObject deadObject);
     public delegate void DamageAction(GameObject damagedObject, int damage);
 
@@ -70,6 +71,12 @@ public class HealthScript : MonoBehaviour
     public int GetMaxHealth()
     {
         return maxHealth;
+    }
+
+    private void OnGUI()
+    {
+        targetpos = Camera.main.WorldToScreenPoint(transform.position);
+        GUI.Box(new Rect(targetpos.x - 25, Screen.height - targetpos.y - 40, 60, 20), currentHealth.ToString() + '/' + maxHealth.ToString());
     }
 
     public void FlashWhite()
