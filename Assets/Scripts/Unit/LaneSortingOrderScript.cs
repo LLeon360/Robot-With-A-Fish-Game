@@ -36,7 +36,7 @@ public class LaneSortingOrderScript : MonoBehaviour
 
     void UpdateSortingOrder()
     {
-        int laneIndex = unitInfoScript.GetLane();
+        int laneIndex = unitInfoScript.GetLaneIndex();
         //if is not a building, increment sorting order by 1
         int offset = 0;
         switch(unitInfoScript.type)
