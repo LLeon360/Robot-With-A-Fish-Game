@@ -109,22 +109,15 @@ public class UnitScript : MonoBehaviour
 
     GameObject CheckInFront() {
         float closestDistance = Mathf.Infinity;
-        GameObject closestUnit = null;
+        GameObject closestUnit = null;        
+        GameObject thisLane = unitInfo.GetLane();
+        Transform unitsInLane = thisLane.transform.Find("Units");
 
-        // Define the position of the circle. This should be in front of the unit.
-        Vector2 circlePosition = transform.position + direction * attackRange;
-
-        // Define the radius of the circle.
-        float radius = 0.5f;
-
-        // Get all colliders that overlap the circle.
-        Collider2D[] colliders = Physics2D.OverlapCircleAll(circlePosition, radius);
-
-        // Loop through the colliders and handle each one.
-        foreach (Collider2D collider in colliders)
+        //iterate through children of unitsInLane
+        foreach (Transform otherUnit in unitsInLane.transform) 
         {
             // Check if the collider belongs to a unit.
-            UnitInfoScript otherUnitInfo = collider.GetComponent<UnitInfoScript>();
+            UnitInfoScript otherUnitInfo = otherUnit.GetComponent<UnitInfoScript>();
             if (unitInfo != null)
             {
                 if (targetBuildingsOnly && otherUnitInfo.type != "Building")
@@ -132,10 +125,26 @@ public class UnitScript : MonoBehaviour
                     continue;
                 }
                 //check same lane
-                if(unitInfo.GetLane() != otherUnitInfo.GetLane())
+                if(unitInfo.GetLaneIndex() != otherUnitInfo.GetLaneIndex())
                 {
                     continue;
                 }
+                //check if it's within range
+                if(Mathf.Abs(transform.position.x - otherUnitInfo.transform.position.x) > attackRange)
+                {
+                    continue;
+                }
+                //check that it is in front based on player number
+                if (unitInfo.player == 0) {
+                    if (otherUnit.position.x < transform.position.x) {
+                        continue;
+                    }
+                } else if (unitInfo.player == 1) {
+                    if (otherUnit.position.x > transform.position.x) {
+                        continue;
+                    }
+                }
+
 
                 // if unit info is different player
                 if(unitInfo.player != otherUnitInfo.player)
@@ -148,11 +157,11 @@ public class UnitScript : MonoBehaviour
                 }
             }
         }
-
         return closestUnit;
     }
 
-    void AttackTargt()
+    // to be called by animation event
+    public void AttackTarget()
     {
         //it's possible that the target has been destroyed inbetween the start of the attack and dealing dmg
         if(target == null)

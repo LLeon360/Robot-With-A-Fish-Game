@@ -35,8 +35,12 @@ public class UnitInfoScript : MonoBehaviour
         }
     }
 
-    public int GetLane(){
-        GameObject lane = transform.parent.parent.gameObject;
+    public int GetLaneIndex(){
+        GameObject lane = GetLane();
         return lane.GetComponent<LaneScript>().laneIndex;
+    }
+
+    public GameObject GetLane() {
+        return transform.parent.parent.gameObject;
     }
 }

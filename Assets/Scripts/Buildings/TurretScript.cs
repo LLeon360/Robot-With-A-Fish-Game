@@ -2,57 +2,80 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class towerscirpt : MonoBehaviour
+[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(UnitInfoScript))]
+
+public class TurretScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public GameObject enemytoattack;
+    private Animator animator;
+    private UnitInfoScript unitInfo;
 
-    public bool canattack;
+    [SerializeField] 
+    private GameObject projectile;
 
-    public int attackpower;
+    [SerializeField]
+    private float attackRange;
 
+    [SerializeField]
+    private float attackRate;
+    private float nextAttackTime;
 
-    void Start()
+    [SerializeField] //for debug
+    private string state;
+
+    void Start() 
     {
-        canattack = true ; 
-        attackpower = 50;
-        
-    }
+        animator = GetComponent<Animator>();
+        unitInfo = GetComponent<UnitInfoScript>();
+        nextAttackTime = 0f;
+    }   
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (canattack && enemytoattack != null) {
-            StartCoroutine(Attack());
+    void Update() 
+    {   
+        //default idle
+        state = "Idle"; 
+        //if can fire, check for units and update state if there are enemies in range
+        if (Time.time >= nextAttackTime) {
+            CheckInFront();
+            state = "Attack";
         }
 
+        //update animator
+        animator.SetBool("isAttacking", state == "Attack");
     }
 
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if(col.gameObject.tag == "enemy")
+    void CheckInFront() {
+        GameObject thisLane = unitInfo.GetLane();
+        Transform unitsInLane = thisLane.transform.Find("Units");
+
+        //iterate through children of unitsInLane
+        foreach (Transform unit in unitsInLane.transform) 
         {
-            if(enemytoattack == null) {
-            enemytoattack = col.gameObject;
+            if (unit.gameObject != gameObject) {
+                //check that it is in front based on player number
+                if (unitInfo.player == 0) {
+                    if (unit.position.x < transform.position.x) {
+                        continue;
+                    }
+                } else if (unitInfo.player == 1) {
+                    if (unit.position.x > transform.position.x) {
+                        continue;
+                    }
+                }
+
+                float distance = Vector3.Distance(unit.position, transform.position);
+                if (distance < attackRange) {
+                    state = "Attack";
+                }
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D col)
-    {
-        if(col.gameObject == enemytoattack) {
-            enemytoattack = null;
-
-        }
+    public void FireProjectile() {
+        GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+        newProjectile.GetComponent<ProjectileScript>().player = unitInfo.player;
+        newProjectile.GetComponent<ProjectileScript>().direction = (unitInfo.player == 0 ? Vector3.right : Vector3.left);
     }
-
-    IEnumerator Attack()
-    {
-        canattack = false;
-        enemytoattack.GetComponent<HealthScript>().Damage(attackpower);
-        yield return new WaitForSeconds(0.5f);
-        canattack = true;
-    }
-
 
 }
