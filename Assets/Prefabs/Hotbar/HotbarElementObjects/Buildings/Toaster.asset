@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
+  m_Name: Toaster
+  m_EditorClassIdentifier: 
+  slotType: Building
+  elementName: Toaster
+  deployPrefab: {fileID: 2287650968253059035, guid: dcb4011ae7afd6a4ca3fcf301dc71c11, type: 3}
+  cost: 1
+  cooldown: 1
+  icon: {fileID: 366817368, guid: 2304ea06816fa8c4ab62c14b33c4228a, type: 3}

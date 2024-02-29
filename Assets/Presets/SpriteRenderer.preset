@@ -147,7 +147,7 @@ Preset:
   - target: {fileID: 0}
     propertyPath: m_Sprite
     value: 
-    objectReference: {fileID: -4388444, guid: d9adc37a1dbe76f46851a084010cf422, type: 3}
+    objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Color.r
     value: 1
@@ -194,7 +194,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_WasSpriteAssigned
-    value: 1
+    value: 0
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_MaskInteraction

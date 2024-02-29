@@ -42,7 +42,7 @@ public class TurretScript : MonoBehaviour
         }
 
         //update animator
-        animator.SetBool("isAttacking", state == "Attack");
+        animator.SetBool("Attack", state == "Attack");
     }
 
     void CheckInFront() {

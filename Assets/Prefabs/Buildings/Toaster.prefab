@@ -451,9 +451,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b942f749a8e8984aa7352a84ded3db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 0}
-  attackRange: 0
-  attackRate: 0
+  projectile: {fileID: 4164833325702256610, guid: f8c25cb594ef44b45840e8d2335be781, type: 3}
+  attackRange: 8
+  attackRate: 1
   state: 
 --- !u!1 &3599027892888272937
 GameObject:
