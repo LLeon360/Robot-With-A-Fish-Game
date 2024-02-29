@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 4492244154194430654}
   m_Layer: 3
   m_Name: Power Tower
-  m_TagString: Untagged
+  m_TagString: Power Tower
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 125
-  currentHealth: 125
 --- !u!61 &6241699516766393770
 BoxCollider2D:
   m_ObjectHideFlags: 0
