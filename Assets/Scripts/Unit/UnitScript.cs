@@ -28,7 +28,7 @@ public class UnitScript : MonoBehaviour
     private float attackRange;
 
     [SerializeField]
-    private bool isFlying;
+    private bool targetBaseOnly;
     [SerializeField]
     private bool targetBuildingsOnly;
 
