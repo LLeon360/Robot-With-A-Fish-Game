@@ -28,7 +28,6 @@ public class HotbarSlot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(this.hotbarElement == null);
         if(hotbarElement != null)
         {
             if(hotbarElement.nextUsableTime <= Time.time)
@@ -65,7 +64,6 @@ public class HotbarSlot : MonoBehaviour
         }
 
         this.hotbarElement = hotbarElement;
-        Debug.Log(this.hotbarElement);
         slotIcon.GetComponent<Image>().sprite = hotbarElement.hotbarElementObject.icon;
         
         //if is buliding set background to green, if unit set to purple
