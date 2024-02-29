@@ -181,9 +181,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eee657b3405be54b89ddbd287544412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 75
-  currentHealth: 75
-  targetpos: {x: 0, y: 0}
+  maxHealth: 125
+  currentHealth: 125
 --- !u!61 &6241699516766393770
 BoxCollider2D:
   m_ObjectHideFlags: 0
