@@ -325,6 +325,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36a5436979210ce4c9e6d2af5e683eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1683036031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1683036032}
+  m_Layer: 0
+  m_Name: Win Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1683036032
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683036031}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.0579114, y: -0.55054104, z: 0.0066284044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2926425181673902772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -648,6 +679,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
+      propertyPath: passiveIncome
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
+      propertyPath: incomeCooldown
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7962576010215193264, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_Name
       value: Resource Manager
@@ -883,3 +922,4 @@ SceneRoots:
   - {fileID: 6399764453643117223}
   - {fileID: 7488805367482712431}
   - {fileID: 273944373}
+  - {fileID: 1683036032}
