@@ -115,7 +115,7 @@ public class UnitScript : MonoBehaviour
         Transform buildingsInLane = thisLane.transform.Find("Buildings");
 
         //iterate through children of unitsInLane
-        if(!targetBuildingsOnly) {
+        if(!targetBuildingsOnly && !targetBaseOnly) {
             foreach (Transform otherUnit in unitsInLane.transform) 
             {
                 UnitInfoScript otherUnitInfo = otherUnit.GetComponent<UnitInfoScript>();
@@ -161,6 +161,11 @@ public class UnitScript : MonoBehaviour
                 //null check, should not happen, only units should go in "Units" object
                 if (buildingInfo != null)
                 {
+                    if(targetBaseOnly && buildingInfo.tag != "Power Tower")
+                    {
+                        continue;
+                    }
+
                     float distance = Mathf.Abs(transform.position.x - building.transform.position.x);
                     //check if it's within range
                     if(distance > attackRange)

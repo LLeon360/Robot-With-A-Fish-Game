@@ -4,7 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - enemy
+  - Power Tower
   layers:
   - Default
   - TransparentFX
