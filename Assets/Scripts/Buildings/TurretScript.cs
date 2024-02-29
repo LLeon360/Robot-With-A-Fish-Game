@@ -51,26 +51,29 @@ public class TurretScript : MonoBehaviour
         //iterate through children of unitsInLane
         foreach (Transform unit in unitsInLane.transform) 
         {
-            if (unit.gameObject != gameObject) {
-                //check that it is in front based on player number
-                if (unitInfo.player == 0) {
-                    if (unit.position.x < transform.position.x) {
-                        continue;
-                    }
-                } else if (unitInfo.player == 1) {
-                    if (unit.position.x > transform.position.x) {
-                        continue;
-                    }
+            //check that it is in front based on player number
+            if (unitInfo.player == 0) {
+                if (unit.position.x < transform.position.x) {
+                    continue;
                 }
-
-                float distance = Mathf.Abs(transform.position.x - unit.transform.position.x);
-
-                if (distance < attackRange) {
-                    state = "Attack";
-                    nextAttackTime = Time.time + attackCooldown;
-                    //only needs to find one unit to attack
-                    break;
+            } else if (unitInfo.player == 1) {
+                if (unit.position.x > transform.position.x) {
+                    continue;
                 }
+            }
+
+            //check that it is an enemy
+            if (unit.GetComponent<UnitInfoScript>().player == unitInfo.player) {
+                continue;
+            }
+
+            float distance = Mathf.Abs(transform.position.x - unit.transform.position.x);
+
+            if (distance < attackRange) {
+                state = "Attack";
+                nextAttackTime = Time.time + attackCooldown;
+                //only needs to find one unit to attack
+                break;
             }
         }
     }
