@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 5970717117280538562}
   - component: {fileID: 6748154128763967353}
   - component: {fileID: 8474763681488969220}
+  - component: {fileID: 5132923555418407804}
   m_Layer: 3
   m_Name: Factory
   m_TagString: Untagged
@@ -185,7 +186,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
-  currentHealth: 30
 --- !u!61 &6748154128763967353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -245,6 +245,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sortingGroup: {fileID: 0}
   unitInfoScript: {fileID: 0}
+--- !u!114 &5132923555418407804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2398919869819323992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10d4156433d7c7243adf7b919a368a4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2977611158428493790
 GameObject:
   m_ObjectHideFlags: 0
