@@ -147,20 +147,16 @@ PrefabInstance:
       value: Scene Manager
       objectReference: {fileID: 0}
     - target: {fileID: 2546780423437704906, guid: 20369759bce79fb419d4c427f81e01f0, type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 2546780423437704906, guid: 20369759bce79fb419d4c427f81e01f0, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 579.8276
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2546780423437704906, guid: 20369759bce79fb419d4c427f81e01f0, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 412.12918
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2546780423437704906, guid: 20369759bce79fb419d4c427f81e01f0, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.793111
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2546780423437704906, guid: 20369759bce79fb419d4c427f81e01f0, type: 3}
       propertyPath: m_LocalRotation.w
@@ -337,7 +333,7 @@ GameObject:
   m_Layer: 0
   m_Name: Win Manager
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 2974397684917235467, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -350,7 +346,7 @@ Transform:
   m_GameObject: {fileID: 1683036031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0579114, y: -0.55054104, z: 0.0066284044}
+  m_LocalPosition: {x: 0, y: 9.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -641,15 +637,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1345695290905323135, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.60223764
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1345695290905323135, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61615264
+      value: 10.5
       objectReference: {fileID: 0}
     - target: {fileID: 1345695290905323135, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.012669366
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1345695290905323135, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -679,14 +675,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
-      propertyPath: passiveIncome
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
-      propertyPath: incomeCooldown
-      value: 0.1
-      objectReference: {fileID: 0}
+    - target: {fileID: 7962576010215193264, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 7962576010215193264, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_Name
       value: Resource Manager

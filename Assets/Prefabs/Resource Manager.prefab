@@ -46,5 +46,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _startingMoney: 100
   _currentMoney: 
-  passiveIncome: 10
-  incomeCooldown: 0.5
+  passiveIncome: 1
+  incomeCooldown: 0.1
