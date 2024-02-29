@@ -114,7 +114,7 @@ public class PlayerController : MonoBehaviour
                     //if is building
                     if(currentSelectionObject.slotType == "Building") {
                         if(!targetTileScript.IsEmpty()) {
-                            Debug.Log("Player " + playerNum + " tried to build on a non-empty tile at Lane " + currentLane + " Tile " + currentTile);
+                            // Debug.Log("Player " + playerNum + " tried to build on a non-empty tile at Lane " + currentLane + " Tile " + currentTile);
                             return;
                         }
                     }

@@ -360,9 +360,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 16e66405e75130a46997536353c87651, type: 2}
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 403b3f4959d8b3f4fbbd645030526d95, type: 2}
+    - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -100.599976
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -28.800049
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -28.800049
+      objectReference: {fileID: 0}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[1]
@@ -372,6 +396,14 @@ PrefabInstance:
       propertyPath: hotbarElementObjects.Array.data[2]
       value: 
       objectReference: {fileID: 11400000, guid: 8c19a8fa2ac0bf2498486e91f90fc43c, type: 2}
+    - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 16e66405e75130a46997536353c87651, type: 2}
+    - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 403b3f4959d8b3f4fbbd645030526d95, type: 2}
     - target: {fileID: 4840576959283150394, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_Pivot.x
       value: 0
