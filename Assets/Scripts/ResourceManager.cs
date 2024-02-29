@@ -11,6 +11,13 @@ public class ResourceManager : MonoBehaviour
     [SerializeField] //for debugging purposes
     private List<int> _currentMoney;
     
+    [SerializeField]
+    private int passiveIncome;
+
+    [SerializeField]
+    private float incomeCooldown;
+    private float nextIncomeTime;
+
     void Start()
     {
         _currentMoney = new List<int>();
@@ -38,6 +45,14 @@ public class ResourceManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.time > nextIncomeTime)
+        {
+            nextIncomeTime = Time.time + incomeCooldown;
+            for(int i = 0; i < 2; i++)
+            {
+                AddMoney(passiveIncome, i);
+            }
+        }
     }
 
     public void SetStartingMoney(int startingMoney)
