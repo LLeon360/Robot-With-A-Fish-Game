@@ -500,7 +500,7 @@ MonoBehaviour:
   unitInfo: {fileID: 0}
   speed: 0.4
   damage: 1
-  attackRange: 1
+  attackRange: 1.1
   targetBaseOnly: 0
   targetBuildingsOnly: 0
   state: 
