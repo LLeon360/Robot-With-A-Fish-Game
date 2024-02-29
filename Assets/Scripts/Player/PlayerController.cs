@@ -117,25 +117,9 @@ public class PlayerController : MonoBehaviour
                             Debug.Log("Player " + playerNum + " tried to build on a non-empty tile at Lane " + currentLane + " Tile " + currentTile);
                             return;
                         }
-                        //deploy
-                        GameObject newBuilding = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
-                        targetTileScript.SetBuilding(newBuilding);
-                        newBuilding.transform.SetParent(laneScript.buildingParent.transform);
-
-                        //set owner
-                        UnitInfoScript unitInfo = newBuilding.GetComponent<UnitInfoScript>();
-                        unitInfo.player = playerNum;
                     }
-                    else if(currentSelectionObject.slotType == "Unit") {
-                        //deploy
-                        GameObject newUnit = Instantiate(currentSelectionObject.deployPrefab, targetTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
-                        GameObject lane = laneManager.GetLane(currentLane);
-                        newUnit.transform.SetParent(laneScript.unitParent.transform);
-
-                        //set owner
-                        UnitInfoScript unitInfo = newUnit.GetComponent<UnitInfoScript>();
-                        unitInfo.player = playerNum;
-                    }
+                    
+                    LaneManager.Instance.Deploy(currentLane, currentTile, currentSelectionObject.deployPrefab, playerNum, currentSelectionObject.slotType == "Building");
 
                     //set next use
                     currentSelection.UpdateNextUsableTime();

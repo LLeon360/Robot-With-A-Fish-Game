@@ -35,8 +35,6 @@ public class LaneManager : MonoBehaviour
         }
     }
     [SerializeField]
-    private float screenHeight = 10f;
-    [SerializeField]
     private float laneWidth = 1f;
     private List<GameObject> lanes;
 
@@ -141,17 +139,8 @@ public class LaneManager : MonoBehaviour
             GameObject startTile = laneScript.GetTile(0);
             GameObject endTile = laneScript.GetTile(laneScript.laneLength-1);
 
-            GameObject startTower = Instantiate(towerPrefab, startTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
-            GameObject endTower = Instantiate(towerPrefab, endTile.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
-
-            startTile.GetComponent<TileScript>().SetBuilding(startTower);
-            endTile.GetComponent<TileScript>().SetBuilding(endTower);
-
-            startTower.transform.SetParent(laneScript.buildingParent.transform);
-            endTower.transform.SetParent(laneScript.buildingParent.transform);
-
-            startTower.GetComponent<UnitInfoScript>().player = 0;
-            endTower.GetComponent<UnitInfoScript>().player = 1;
+            Deploy(laneScript.laneIndex, 0, towerPrefab, 0, true);
+            Deploy(laneScript.laneIndex, laneScript.laneLength-1, towerPrefab, 1, true);
         }
     }    
     IEnumerator PlaceTowersAfterFrame()
@@ -161,6 +150,27 @@ public class LaneManager : MonoBehaviour
 
         // Now place the towers
         PlaceTowers();
+    }
+
+    public GameObject Deploy(int lane, int tile, GameObject prefab, int player, bool isBuilding) {
+        GameObject laneObject = GetLane(lane);
+        LaneScript laneScript = laneObject.GetComponent<LaneScript>();
+        GameObject tileObject = laneScript.GetTile(tile);
+        TileScript tileScript = tileObject.GetComponent<TileScript>();
+
+        GameObject newUnit = Instantiate(towerPrefab, tileObject.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
+        if(isBuilding)
+        {
+            newUnit.transform.SetParent(laneScript.buildingParent.transform);
+            tileScript.SetBuilding(newUnit);
+        }
+        else {
+            newUnit.transform.SetParent(laneScript.unitParent.transform);
+        
+        }
+        newUnit.GetComponent<UnitInfoScript>().player = player;
+
+        return newUnit;
     }
 
 }
