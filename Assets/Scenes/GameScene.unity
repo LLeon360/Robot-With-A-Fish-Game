@@ -350,6 +350,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e538859441060b44d9ff40106250ce1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &352845790 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6326205091208468174, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+  m_PrefabInstance: {fileID: 2926425181673902772}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &387125211
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1160,10 @@ PrefabInstance:
       value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: slotSelector
+      value: 
+      objectReference: {fileID: 352845790}
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -1169,7 +1178,7 @@ PrefabInstance:
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 3be6f262195aef44abb762b96caf744b, type: 2}
     - target: {fileID: 2987355512636817637, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -30
