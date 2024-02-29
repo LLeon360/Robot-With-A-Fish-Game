@@ -158,7 +158,7 @@ public class LaneManager : MonoBehaviour
         GameObject tileObject = laneScript.GetTile(tile);
         TileScript tileScript = tileObject.GetComponent<TileScript>();
 
-        GameObject newUnit = Instantiate(towerPrefab, tileObject.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
+        GameObject newUnit = Instantiate(prefab, tileObject.transform.position - new Vector3(0, 0.4f, 0), Quaternion.identity);
         if(isBuilding)
         {
             newUnit.transform.SetParent(laneScript.buildingParent.transform);
