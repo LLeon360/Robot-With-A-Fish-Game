@@ -18,7 +18,7 @@ public class TurretScript : MonoBehaviour
     private float attackRange;
 
     [SerializeField]
-    private float attackRate;
+    private float attackCooldown;
     private float nextAttackTime;
 
     [SerializeField] //for debug
@@ -38,7 +38,6 @@ public class TurretScript : MonoBehaviour
         //if can fire, check for units and update state if there are enemies in range
         if (Time.time >= nextAttackTime) {
             CheckInFront();
-            state = "Attack";
         }
 
         //update animator
@@ -68,6 +67,7 @@ public class TurretScript : MonoBehaviour
 
                 if (distance < attackRange) {
                     state = "Attack";
+                    nextAttackTime = Time.time + attackCooldown;
                     //only needs to find one unit to attack
                     break;
                 }
@@ -79,6 +79,7 @@ public class TurretScript : MonoBehaviour
         GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
         newProjectile.GetComponent<ProjectileScript>().player = unitInfo.player;
         newProjectile.GetComponent<ProjectileScript>().direction = (unitInfo.player == 0 ? Vector3.right : Vector3.left);
+        state = "Idle";
     }
 
 }
