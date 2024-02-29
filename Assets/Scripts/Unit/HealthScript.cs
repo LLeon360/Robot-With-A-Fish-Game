@@ -5,10 +5,9 @@ public class HealthScript : MonoBehaviour
 {
     [SerializeField]
     private int maxHealth;
-    [SerializeField]
     private int currentHealth;
     public delegate void DeathAction(GameObject deadObject);
-    public delegate void DamageAction(GameObject damagedObject, int damage);
+    public delegate void DamageAction(GameObject damagedObject, int damage, GameObject attacker);
 
     public event DeathAction OnDeath;
     public event DamageAction OnDamage;
@@ -16,13 +15,14 @@ public class HealthScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentHealth = maxHealth;
     }
 
     // Update is called once per frame
     void Update()
     {
         //default damage flash
-        OnDamage = (GameObject damagedObject, int damage) =>
+        OnDamage = (GameObject damagedObject, int damage, GameObject attacker) =>
         {
             FlashWhite();
         };
@@ -34,12 +34,12 @@ public class HealthScript : MonoBehaviour
         };
     }
 
-    public void Damage(int damage)
+    public void Damage(int damage, GameObject attacker)
     {
         currentHealth -= damage;
         if(OnDamage != null)
         {
-            OnDamage(gameObject, damage);
+            OnDamage(gameObject, damage, attacker);
         }
         if(currentHealth <= 0)
         {

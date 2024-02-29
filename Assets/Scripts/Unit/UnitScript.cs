@@ -204,6 +204,6 @@ public class UnitScript : MonoBehaviour
 
         //grab enemy health script and damage
         HealthScript enemyHealthScript = target.GetComponent<HealthScript>();
-        enemyHealthScript.Damage(damage);
+        enemyHealthScript.Damage(damage, gameObject);
     }
 }

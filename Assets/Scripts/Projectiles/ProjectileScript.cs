@@ -36,7 +36,7 @@ public class ProjectileScript : MonoBehaviour
             UnitInfoScript otherUnitInfo = other.gameObject.GetComponent<UnitInfoScript>();
             if (otherUnitInfo.player != player) {
                 HealthScript otherHealthScript = other.gameObject.GetComponent<HealthScript>();
-                otherHealthScript.Damage(damage);
+                otherHealthScript.Damage(damage, null);
                 Destroy(gameObject);
             }
         }
