@@ -174,3 +174,4 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 0}
   player: 0
   damage: 1
+  speed: 1
