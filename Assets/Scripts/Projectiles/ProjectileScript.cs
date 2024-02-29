@@ -14,6 +14,8 @@ public class ProjectileScript : MonoBehaviour
     public int player;
     [SerializeField]
     public int damage;
+    [SerializeField]
+    public float speed;
     
     // Start is called before the first frame update
     void Start()
@@ -26,7 +28,7 @@ public class ProjectileScript : MonoBehaviour
     void Update()
     {
         //move projectile
-        rb.velocity = direction * 5;
+        rb.velocity = direction * speed;
     }
 
     void OnTriggerEnter2D(Collider2D other) {
