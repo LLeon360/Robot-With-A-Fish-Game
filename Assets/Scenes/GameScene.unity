@@ -333,6 +333,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a9f9490e00f97b4d9e86e2dd098bf40, type: 2}
+    - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8c19a8fa2ac0bf2498486e91f90fc43c, type: 2}
     - target: {fileID: 4840576959283150394, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -635,14 +647,6 @@ PrefabInstance:
     - target: {fileID: 1345695290905323135, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
-      propertyPath: passiveIncome
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
-      propertyPath: incomeCooldown
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7962576010215193264, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_Name

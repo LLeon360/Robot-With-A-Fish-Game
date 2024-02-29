@@ -118,13 +118,13 @@ public class PlayerController : MonoBehaviour
                             return;
                         }
                     }
-                    
+
                     LaneManager.Instance.Deploy(currentLane, currentTile, currentSelectionObject.deployPrefab, playerNum, currentSelectionObject.slotType == "Building");
 
                     //set next use
                     currentSelection.UpdateNextUsableTime();
                     //deduct cost
-                    ResourceManager.Instance.RemoveMoney(currentSelectionObject.cost, playerNum);
+                    ResourceManager.Instance.RemoveMoney(playerNum, currentSelectionObject.cost);
                 }
             }
         }

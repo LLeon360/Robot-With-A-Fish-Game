@@ -50,7 +50,7 @@ public class ResourceManager : MonoBehaviour
             nextIncomeTime = Time.time + incomeCooldown;
             for(int i = 0; i < 2; i++)
             {
-                AddMoney(passiveIncome, i);
+                AddMoney(i, passiveIncome);
             }
         }
     }
@@ -64,12 +64,12 @@ public class ResourceManager : MonoBehaviour
         }
     }
 
-    public void AddMoney(int amount, int player)
+    public void AddMoney(int player, int amount)
     {
         _currentMoney[player] += amount;
     }
 
-    public void RemoveMoney(int amount, int player)
+    public void RemoveMoney(int player, int amount)
     {
         _currentMoney[player] -= amount;
     }
