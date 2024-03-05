@@ -12,7 +12,12 @@ public class LaneManager : MonoBehaviour
     private int _laneCount = 3;
     [SerializeField]
     private GameObject towerPrefab;
-
+    
+    private bool boardInitialized = false;
+    public bool BoardInitialized
+    {
+        get { return boardInitialized; }
+    }
     public int laneCount
     {
         get { return _laneCount; }
@@ -41,6 +46,7 @@ public class LaneManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        boardInitialized = false;
         SetupLanes();
     }
     void SetupLanes()
@@ -150,6 +156,7 @@ public class LaneManager : MonoBehaviour
 
         // Now place the towers
         PlaceTowers();
+        boardInitialized = true;
     }
 
     public GameObject Deploy(int lane, int tile, GameObject prefab, int player, bool isBuilding) {

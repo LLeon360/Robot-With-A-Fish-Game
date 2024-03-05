@@ -6,9 +6,6 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    //lane manager, need it to snap to lanes and stay in grid
-    [SerializeField]
-    private LaneManager laneManager;
     private int currentLane = 0;
     private int currentTile = 0;
 
@@ -34,14 +31,12 @@ public class PlayerController : MonoBehaviour
 
     // Start is called before the first frame update
     void Start()
-    {
-        laneManager = LaneManager.Instance;
-        
+    {        
         currentLane = 0;
         if(playerNum == 0) {
             currentTile = 0;
         } else {
-            currentTile = laneManager.laneLength -1;
+            currentTile = LaneManager.Instance.laneLength -1;
         }
         hotbarManager = GameObject.Find("Hotbar"+(playerNum+1)).GetComponent<HotbarManager>();
         if(hotbarManager == null) {
@@ -79,7 +74,7 @@ public class PlayerController : MonoBehaviour
             HotbarElement currentSelection = hotbarManager.GetSelectedElement();
             HotbarElementObject currentSelectionObject = currentSelection.GetHotbarElementObject();
             TileScript targetTileScript = targetTile.GetComponent<TileScript>();
-            LaneScript laneScript = laneManager.GetLane(currentLane).GetComponent<LaneScript>();
+            LaneScript laneScript = LaneManager.Instance.GetLane(currentLane).GetComponent<LaneScript>();
 
             //check for nulls
             if(currentSelection == null) {
@@ -100,10 +95,10 @@ public class PlayerController : MonoBehaviour
             }
 
             //check if player is on their half of the map
-            if(playerNum == 0 && currentTile >= laneManager.laneLength/2) {
+            if(playerNum == 0 && currentTile >= LaneManager.Instance.laneLength/2) {
                 return;
             }
-            if(playerNum == 1 && currentTile < laneManager.laneLength/2) {
+            if(playerNum == 1 && currentTile < LaneManager.Instance.laneLength/2) {
                 return;
             }
 
@@ -147,7 +142,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void MoveX(float direction) {
-        int laneLength = laneManager.laneLength;
+        int laneLength = LaneManager.Instance.laneLength;
         if(direction < 0) {
             currentTile = (currentTile - 1 + laneLength) % laneLength;
         } else if(direction > 0) {
@@ -156,7 +151,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void MoveY(float direction) {
-        int laneCount = laneManager.laneCount;
+        int laneCount = LaneManager.Instance.laneCount;
         // lanes count down to align with sorting order, realize this might be not intuitive for movement
         if(direction < 0) {
             currentLane = (currentLane + 1) % laneCount;
@@ -166,7 +161,14 @@ public class PlayerController : MonoBehaviour
     }
 
     void FetchTargetTile() {
-        targetTile = laneManager.GetTile(currentLane, currentTile);
+        if(!LaneManager.Instance.BoardInitialized) {
+            Debug.LogError("Board not initialized, cannot fetch target tile");
+            Debug.LogError("Forcing " + gameObject.name + " to back to (0, 0)");
+            currentLane = 0;
+            currentTile = 0;
+            return;
+        }
+        targetTile = LaneManager.Instance.GetTile(currentLane, currentTile);
         if(targetTile == null){
             Debug.LogError("Target Tile is null, failed to fetch");
             Debug.LogError("Forcing " + gameObject.name + " to back to (0, 0)");
