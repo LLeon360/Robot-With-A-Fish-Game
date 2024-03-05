@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bad47fc57d9a75a459c205f016a281e6
+guid: b3bae3f1daaeade4a8e7b16e1c72a782
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -121,91 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: SplitHead1
-      rect:
-        serializedVersion: 2
-        x: 111
-        y: 650
-        width: 388
-        height: 310
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9426b7a7d2ee544bbabd7a7b8d5634e
-      internalID: -339070846
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SplitBody
-      rect:
-        serializedVersion: 2
-        x: 245
-        y: 458
-        width: 138
-        height: 160
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 63c533cda7d61744cbabf9857585e2fd
-      internalID: 1948315391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Hand
-      rect:
-        serializedVersion: 2
-        x: 576
-        y: 475
-        width: 73
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 231a5f9d8cd9bbd4caed286d965ecb5d
-      internalID: -1878846185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SplitHead2
-      rect:
-        serializedVersion: 2
-        x: 187
-        y: 247
-        width: 256
-        height: 166
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e26d8c0747ce39d4da51fd633a8eab99
-      internalID: 1500841736
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -216,15 +132,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Hand: -1878846185
-      SplitBody: 1948315391
-      SplitBody2: -1429354488
-      SplitHead1: -339070846
-      SplitHead2: 1500841736
-      TrenchcoatSplit_1: -1715994679
-      TrenchcoatSplit_4: -1134646664
-      TrenchcoatSplit_6: -2133510627
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

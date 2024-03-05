@@ -656,6 +656,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 4164833325702256610, guid: f8c25cb594ef44b45840e8d2335be781, type: 3}
   attackRange: 3
-  attackCooldown: 1.5
+  attackCooldown: 1.2
   state: 
   damage: 2
