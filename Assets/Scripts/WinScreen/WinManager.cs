@@ -22,11 +22,11 @@ public class WinManager : MonoBehaviour
         {
             GameObject firstBuilding = LaneManager.Instance.GetTile(i, 0).GetComponent<TileScript>().GetBuilding();
             GameObject lastBuilding = LaneManager.Instance.GetTile(i, LaneManager.Instance.laneLength - 1).GetComponent<TileScript>().GetBuilding();
-            if(firstBuilding.tag == "Power Tower")
+            if(firstBuilding != null && firstBuilding.tag == "Power Tower")
             {
                 p1HasPowerTower = true;
             }
-            if(lastBuilding.tag == "Power Tower")
+            if(lastBuilding != null && lastBuilding.tag == "Power Tower")
             {
                 p2HasPowerTower = true;
             }
