@@ -17,14 +17,15 @@ public class SceneController : MonoBehaviour
     void Awake()
     {
         // Singleton pattern, only one instance of this class should exist
+        // Retains the new instance of the class and destroys the old one, to maintain references within a scene
         if (Instance == null)
         {
             Instance = this;
-            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(Instance);
+            Instance = this;
         }
     }
 
