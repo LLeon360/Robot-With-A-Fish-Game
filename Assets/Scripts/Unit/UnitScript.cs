@@ -165,6 +165,9 @@ public class UnitScript : MonoBehaviour
                     {
                         continue;
                     }
+                    if(buildingInfo.tag == "Trap") {
+                        continue;
+                    }
 
                     float distance = Mathf.Abs(transform.position.x - building.transform.position.x);
                     //check if it's within range

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
+  m_Name: Mousetrap
+  m_EditorClassIdentifier: 
+  slotType: Building
+  elementName: Mousetrap
+  deployPrefab: {fileID: 9130555602144700992, guid: 077d1bd698153be429a57138604f049c, type: 3}
+  cost: 200
+  cooldown: 15
+  icon: {fileID: -1152966611, guid: b3bae3f1daaeade4a8e7b16e1c72a782, type: 3}

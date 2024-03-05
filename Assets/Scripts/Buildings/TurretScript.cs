@@ -117,4 +117,33 @@ public class TurretScript : MonoBehaviour
             }
         }
     } 
+
+    //instakills a unit and itself
+    public void Mousetrap() {GameObject thisLane = unitInfo.GetLane();
+        Transform unitsInLane = thisLane.transform.Find("Units");
+        float closestDistance = Mathf.Infinity;
+        GameObject closestUnit = null;
+        //iterate through children of unitsInLane
+        foreach (Transform unit in unitsInLane.transform) 
+        {
+            //check that it is an enemy
+            if (unit.GetComponent<UnitInfoScript>().player == unitInfo.player) {
+                continue;
+            }
+
+            float distance = Mathf.Abs(transform.position.x - unit.transform.position.x);
+
+            if (distance < attackRange) {
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closestUnit = unit.gameObject;
+                }
+            }
+        }
+
+        if(closestUnit != null) {
+            closestUnit.GetComponent<HealthScript>().Damage(1000, gameObject);
+            Destroy(gameObject);
+        }
+    }
 }

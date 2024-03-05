@@ -479,7 +479,7 @@ GameObject:
   m_Icon: {fileID: 4422084297763085224, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7192210572302214037
 Transform:
   m_ObjectHideFlags: 0
@@ -654,7 +654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b942f749a8e8984aa7352a84ded3db6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectile: {fileID: 4164833325702256610, guid: f8c25cb594ef44b45840e8d2335be781, type: 3}
+  projectile: {fileID: 0}
   attackRange: 3
   attackCooldown: 1.2
   state: 
