@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eee657b3405be54b89ddbd287544412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 15
+  maxHealth: 50
 --- !u!61 &1187186947148380018
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -658,4 +658,4 @@ MonoBehaviour:
   attackRange: 3
   attackCooldown: 1.5
   state: 
-  damage: 1
+  damage: 2
