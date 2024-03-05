@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RobotWithFish
   m_EditorClassIdentifier: 
   slotType: Unit
-  elementName: 
+  elementName: Robot with a Fish
   deployPrefab: {fileID: 6775372792858774172, guid: 439ea87fde431c54785bc8d541bd063f, type: 3}
   cost: 200
   cooldown: 4

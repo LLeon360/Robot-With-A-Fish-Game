@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2304ea06816fa8c4ab62c14b33c4228a
+guid: 5543624755d3ddc49b442e22bf0dcef4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 550
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ToasterBack
+      name: Body
       rect:
         serializedVersion: 2
-        x: 289
-        y: 698
-        width: 295
-        height: 54
+        x: 243
+        y: 354
+        width: 480
+        height: 451
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,134 +137,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78ab38575e0f48241bd7a26d5d03dba2
-      internalID: 488428414
+      spriteID: 04e32096549a1d447a31765b4cea320e
+      internalID: -1412338454
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ToasterSlot2
+      name: Wing
       rect:
         serializedVersion: 2
-        x: 329
-        y: 596
-        width: 192
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 108
+        y: 120
+        width: 197
+        height: 166
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 36f0e402684416941b5bfeaafe5da128
-      internalID: 1054878947
+      spriteID: 62b1902767b96714f9fb5393177e8406
+      internalID: 1152698634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Toast
+      name: Wing_Shadow
       rect:
         serializedVersion: 2
-        x: 689
-        y: 447
-        width: 179
-        height: 183
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 627
+        y: 115
+        width: 200
+        height: 169
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6be92d537f5cb024db5dcdee531d6a06
-      internalID: -1392810915
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ToasterMid
-      rect:
-        serializedVersion: 2
-        x: 285
-        y: 455
-        width: 310
-        height: 51
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d379ef98b20f1a47b847c29dc910966
-      internalID: 79223794
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ToasterSlot
-      rect:
-        serializedVersion: 2
-        x: 329
-        y: 351
-        width: 192
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 206a0b563662c6e4b9c624814d5b45e0
-      internalID: 1372002290
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ToasterTab
-      rect:
-        serializedVersion: 2
-        x: 115
-        y: 258
-        width: 56
-        height: 53
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c790d17a7a17cdb46832bbf2f656847e
-      internalID: -317704902
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ToasterFace
-      rect:
-        serializedVersion: 2
-        x: 278
-        y: 99
-        width: 329
-        height: 213
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12a934a6a36706a438547c23051c178c
-      internalID: 366817368
+      spriteID: f01fdf4098f3c80438ff0c2650ca2380
+      internalID: 1297201736
       vertices: []
       indices: 
       edges: []
@@ -280,14 +196,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Toast: -1392810915
-      ToasterBack: 488428414
-      ToasterFace: 366817368
-      ToasterMid: 79223794
-      ToasterSlot: 1372002290
-      ToasterSlot2: 1054878947
-      ToasterTab: -317704902
-      Toaster_1: 1097856578
+      Body: -1412338454
+      Wing: 1152698634
+      Wing_Shadow: 1297201736
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

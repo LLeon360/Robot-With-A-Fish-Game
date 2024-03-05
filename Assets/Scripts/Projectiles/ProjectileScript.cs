@@ -29,6 +29,11 @@ public class ProjectileScript : MonoBehaviour
     {
         //move projectile
         rb.velocity = direction * speed;
+
+        //set rotation to match direction in 2d
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+        angle = (angle > 90 || angle < 90) ? angle-180 : angle+180;
+        transform.rotation = Quaternion.Euler(0, 0, angle);
     }
 
     void OnTriggerEnter2D(Collider2D other) {

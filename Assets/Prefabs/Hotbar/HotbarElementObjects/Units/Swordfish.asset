@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
-  m_Name: Wall
+  m_Name: Swordfish
   m_EditorClassIdentifier: 
-  slotType: Building
-  elementName: Wall
-  deployPrefab: {fileID: 1839883403198365412, guid: e8836b2749b738a4aa978360bc42ba88, type: 3}
-  cost: 300
-  cooldown: 12
-  icon: {fileID: 21300000, guid: ce24aaa5eeef0b142a0937b90a8323f1, type: 3}
+  slotType: Unit
+  elementName: Robot with a Swordfish
+  deployPrefab: {fileID: 7676843144574227913, guid: 7a221f94f7da05346ba209763809bd87, type: 3}
+  cost: 400
+  cooldown: 8
+  icon: {fileID: 600335006, guid: 91796ff8563ce6444b7b333e57942169, type: 3}

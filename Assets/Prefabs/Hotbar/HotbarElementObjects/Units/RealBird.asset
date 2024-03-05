@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
-  m_Name: Wall
+  m_Name: RealBird
   m_EditorClassIdentifier: 
-  slotType: Building
-  elementName: Wall
-  deployPrefab: {fileID: 1839883403198365412, guid: e8836b2749b738a4aa978360bc42ba88, type: 3}
-  cost: 300
-  cooldown: 12
-  icon: {fileID: 21300000, guid: ce24aaa5eeef0b142a0937b90a8323f1, type: 3}
+  slotType: Unit
+  elementName: Definitely a Real Bird
+  deployPrefab: {fileID: 285743869717519186, guid: 0c2aca5c62572dc46b78677080875b2b, type: 3}
+  cost: 250
+  cooldown: 7
+  icon: {fileID: -1412338454, guid: 5543624755d3ddc49b442e22bf0dcef4, type: 3}
