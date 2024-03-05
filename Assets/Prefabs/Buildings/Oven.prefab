@@ -252,6 +252,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &5917549405545621079
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4932530097052218997}
+  - component: {fileID: 466880522440412978}
+  m_Layer: 0
+  m_Name: FireEffects
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4932530097052218997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917549405545621079}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1419584398151130921}
+  - {fileID: 7767184981528813794}
+  m_Father: {fileID: 7192210572302214037}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!210 &466880522440412978
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5917549405545621079}
+  m_Enabled: 1
+  m_SortingLayerID: 2107996295
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 1
 --- !u!1 &6442438769792984024
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,11 +324,11 @@ Transform:
   m_GameObject: {fileID: 6442438769792984024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.92, y: -0.116, z: 0}
+  m_LocalPosition: {x: 0.92, y: 0.102999985, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7015453933353810814}
+  m_Father: {fileID: 4932530097052218997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4046774935580919138
 SpriteRenderer:
@@ -368,8 +414,6 @@ Transform:
   - {fileID: 2124301476447985770}
   - {fileID: 990273746065845820}
   - {fileID: 4784767703117565309}
-  - {fileID: 7767184981528813794}
-  - {fileID: 1419584398151130921}
   m_Father: {fileID: 7192210572302214037}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8066346437747089640
@@ -398,11 +442,11 @@ Transform:
   m_GameObject: {fileID: 8066346437747089640}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.035, y: -0.525, z: 0}
+  m_LocalPosition: {x: -0.034999967, y: -0.306, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7015453933353810814}
+  m_Father: {fileID: 4932530097052218997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4626062532126395346
 SpriteRenderer:
@@ -494,6 +538,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7015453933353810814}
+  - {fileID: 4932530097052218997}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1377904488735768539
@@ -657,5 +702,6 @@ MonoBehaviour:
   projectile: {fileID: 0}
   attackRange: 3
   attackCooldown: 1.2
+  nextAttackTime: 0
   state: 
   damage: 2

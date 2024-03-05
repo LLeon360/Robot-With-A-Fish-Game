@@ -583,7 +583,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[3]
@@ -601,17 +601,45 @@ PrefabInstance:
       propertyPath: hotbarElementObjects.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: 0d2e52705b2821f41806e217850fd967, type: 2}
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[7]
+      value: 
+      objectReference: {fileID: 11400000, guid: b001338178452d8488c6e15018d06a3b, type: 2}
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: aafa8134709bb524ebbe039bf715b5c5, type: 2}
+    - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -100.599976
+      value: 525.1
       objectReference: {fileID: 0}
     - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -28.800049
+      value: -83.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 124.6
       objectReference: {fileID: 0}
     - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -28.800049
+      value: -85.79997
       objectReference: {fileID: 0}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
@@ -721,6 +749,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6179908795207654915, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_margin.x
+      value: -0.44127652
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_margin.x
+      value: -0.3057709
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.b
+      value: 0.9872493
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_fontColorGradient.bottomRight.r
+      value: 0.7783019
+      objectReference: {fileID: 0}
     - target: {fileID: 8920350716283163739, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -730,7 +778,8 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4220582760211486738, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 1393020824784113922, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
@@ -943,6 +992,10 @@ PrefabInstance:
     - target: {fileID: 1345695290905323135, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
+      propertyPath: _startingMoney
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 7962576010215193264, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_Icon

@@ -19,6 +19,7 @@ public class TurretScript : MonoBehaviour
 
     [SerializeField]
     private float attackCooldown;
+    [SerializeField]
     private float nextAttackTime;
 
     [SerializeField] //for debug
@@ -116,6 +117,7 @@ public class TurretScript : MonoBehaviour
                 unit.GetComponent<HealthScript>().Damage(damage, gameObject);
             }
         }
+        state = "Idle";
     } 
 
     //instakills a unit and itself

@@ -175,3 +175,4 @@ MonoBehaviour:
   player: 0
   damage: 4
   speed: 5
+  canHitBuildings: 0

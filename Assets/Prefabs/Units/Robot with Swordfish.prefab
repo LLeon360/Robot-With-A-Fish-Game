@@ -599,7 +599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eee657b3405be54b89ddbd287544412, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 45
+  maxHealth: 112
 --- !u!50 &5553913865564677440
 Rigidbody2D:
   serializedVersion: 4
@@ -645,7 +645,7 @@ MonoBehaviour:
   unitInfo: {fileID: 0}
   speed: 0.4
   damage: 2
-  attackRange: 3
+  attackRange: 1.5
   targetBaseOnly: 0
   targetBuildingsOnly: 0
   state: 
