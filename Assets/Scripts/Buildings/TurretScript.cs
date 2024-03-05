@@ -119,7 +119,8 @@ public class TurretScript : MonoBehaviour
     } 
 
     //instakills a unit and itself
-    public void Mousetrap() {GameObject thisLane = unitInfo.GetLane();
+    public void Mousetrap() {
+        GameObject thisLane = unitInfo.GetLane();
         Transform unitsInLane = thisLane.transform.Find("Units");
         float closestDistance = Mathf.Infinity;
         GameObject closestUnit = null;
@@ -143,7 +144,7 @@ public class TurretScript : MonoBehaviour
 
         if(closestUnit != null) {
             closestUnit.GetComponent<HealthScript>().Damage(1000, gameObject);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
