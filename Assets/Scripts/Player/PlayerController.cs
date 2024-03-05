@@ -163,9 +163,6 @@ public class PlayerController : MonoBehaviour
     void FetchTargetTile() {
         if(!LaneManager.Instance.BoardInitialized) {
             Debug.LogError("Board not initialized, cannot fetch target tile");
-            Debug.LogError("Forcing " + gameObject.name + " to back to (0, 0)");
-            currentLane = 0;
-            currentTile = 0;
             return;
         }
         targetTile = LaneManager.Instance.GetTile(currentLane, currentTile);
