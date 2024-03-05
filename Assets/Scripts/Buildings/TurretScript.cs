@@ -22,7 +22,9 @@ public class TurretScript : MonoBehaviour
     private float nextAttackTime;
 
     [SerializeField] //for debug
-    private string state;
+    private string state;   
+    [SerializeField]
+    private int damage; //if the unit does area damage
 
     void Start() 
     {
@@ -85,4 +87,34 @@ public class TurretScript : MonoBehaviour
         state = "Idle";
     }
 
+    public void AttackInArea() {
+        GameObject thisLane = unitInfo.GetLane();
+        Transform unitsInLane = thisLane.transform.Find("Units");
+
+        //get all units within range
+        foreach (Transform unit in unitsInLane.transform) 
+        {
+            //check that it is in front based on player number
+            if (unitInfo.player == 0) {
+                if (unit.position.x < transform.position.x) {
+                    continue;
+                }
+            } else if (unitInfo.player == 1) {
+                if (unit.position.x > transform.position.x) {
+                    continue;
+                }
+            }
+
+            //check that it is an enemy
+            if (unit.GetComponent<UnitInfoScript>().player == unitInfo.player) {
+                continue;
+            }
+
+            float distance = Mathf.Abs(transform.position.x - unit.transform.position.x);
+
+            if (distance < attackRange) {
+                unit.GetComponent<HealthScript>().Damage(damage, gameObject);
+            }
+        }
+    } 
 }
