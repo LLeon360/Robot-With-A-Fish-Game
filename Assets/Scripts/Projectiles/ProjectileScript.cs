@@ -16,6 +16,8 @@ public class ProjectileScript : MonoBehaviour
     public int damage;
     [SerializeField]
     public float speed;
+    [SerializeField]
+    public bool canHitBuildings = false;
     
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,9 @@ public class ProjectileScript : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.GetComponent<UnitInfoScript>() != null) {
             UnitInfoScript otherUnitInfo = other.gameObject.GetComponent<UnitInfoScript>();
+            if(!canHitBuildings && otherUnitInfo.type == "Building") {
+                return;
+            }
             if (otherUnitInfo.player != player) {
                 HealthScript otherHealthScript = other.gameObject.GetComponent<HealthScript>();
                 otherHealthScript.Damage(damage, null);
