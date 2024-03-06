@@ -355,6 +355,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 997801455140854834, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 30.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
       value: 9
@@ -385,15 +389,15 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: aafa8134709bb524ebbe039bf715b5c5, type: 2}
     - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 525.1
+      value: 104.37081
       objectReference: {fileID: 0}
     - target: {fileID: 2793105159522358933, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -409,11 +413,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 124.6
+      value: 105.1
       objectReference: {fileID: 0}
     - target: {fileID: 2970993064677187773, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -85.79997
+      objectReference: {fileID: 0}
+    - target: {fileID: 2987355512636817637, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 27.708336
       objectReference: {fileID: 0}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
@@ -545,15 +553,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_fontColorGradient.bottomRight.b
-      value: 0.9872493
+      value: 0.7764706
       objectReference: {fileID: 0}
     - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_fontColorGradient.bottomRight.g
-      value: 1
+      value: 0.7981036
       objectReference: {fileID: 0}
     - target: {fileID: 7528726048924425047, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_fontColorGradient.bottomRight.r
-      value: 0.7783019
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8920350716283163739, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
