@@ -186,6 +186,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 30
+  OnDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!61 &6748154128763967353
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -258,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   productionCooldown: 3
-  productionAmount: 10
+  productionAmount: 5
 --- !u!1 &2977611158428493790
 GameObject:
   m_ObjectHideFlags: 0
