@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 public class HealthScript : MonoBehaviour
 {
     [SerializeField]
     private int maxHealth;
     private int currentHealth;
-    public delegate void DeathAction(GameObject deadObject);
+    // public delegate void DeathAction(GameObject deadObject);
     public delegate void DamageAction(GameObject damagedObject, int damage, GameObject attacker);
 
-    public event DeathAction OnDeath;
+    [SerializeField]
+    // public event DeathAction OnDeath;
+    public UnityEvent<GameObject> OnDeath;
+    [SerializeField]
     public event DamageAction OnDamage;
 
     // Start is called before the first frame update
@@ -28,10 +32,10 @@ public class HealthScript : MonoBehaviour
         };
 
         //default death action is destroy
-        OnDeath = (GameObject deadObject) =>
+        OnDeath.AddListener((GameObject deadObject) =>
         {
             Destroy(deadObject);
-        };
+        });
     }
 
     public void Damage(int damage, GameObject attacker)
@@ -43,7 +47,7 @@ public class HealthScript : MonoBehaviour
         }
         if(currentHealth <= 0)
         {
-            OnDeath(gameObject);
+            OnDeath.Invoke(gameObject);
         }
     }
 

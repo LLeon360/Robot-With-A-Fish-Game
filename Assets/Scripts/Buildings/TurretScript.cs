@@ -82,7 +82,7 @@ public class TurretScript : MonoBehaviour
     }
 
     public void FireProjectile() {
-        GameObject newProjectile = Instantiate(projectile, transform.position, Quaternion.identity);
+        GameObject newProjectile = Instantiate(projectile, transform.position + new Vector3(0, 0.2f, 0), Quaternion.identity);
         newProjectile.GetComponent<ProjectileScript>().player = unitInfo.player;
         newProjectile.GetComponent<ProjectileScript>().direction = (unitInfo.player == 0 ? Vector3.right : Vector3.left);
         state = "Idle";

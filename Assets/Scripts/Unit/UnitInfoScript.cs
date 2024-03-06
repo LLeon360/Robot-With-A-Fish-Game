@@ -43,4 +43,13 @@ public class UnitInfoScript : MonoBehaviour
     public GameObject GetLane() {
         return transform.parent.parent.gameObject;
     }
+
+    public int GetTileIndex() {
+        GetLane();
+        // get offset from the lanetransform
+        float offset = transform.position.x - GetLane().transform.position.x;
+        // get tile based on offset 
+        int tileIndex = Mathf.RoundToInt((offset - 0.5f) + GetLane().GetComponent<LaneScript>().laneLength / 2); 
+        return tileIndex;
+    }
 }

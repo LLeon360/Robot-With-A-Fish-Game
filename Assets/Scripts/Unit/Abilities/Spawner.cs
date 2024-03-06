@@ -21,6 +21,12 @@ public class Spawner : MonoBehaviour
         
     }
 
+    public void DeployOnSelf() {
+        for(int i = 0; i < unitPrefabs.Count; i++) {
+            Deploy(unitInfo.GetLaneIndex(), unitInfo.GetTileIndex(), i);
+        }
+    }
+
     public void Deploy(int lane, int tile, int unitIndex) {
         if(unitIndex < 0 || unitIndex >= unitPrefabs.Count) {
             Debug.LogError("Invalid unit index");

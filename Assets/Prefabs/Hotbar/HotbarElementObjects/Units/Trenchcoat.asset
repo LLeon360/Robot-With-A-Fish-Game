@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b03cda8ce64430a4abb082ed53669875, type: 3}
-  m_Name: RealBird
+  m_Name: Trenchcoat
   m_EditorClassIdentifier: 
   slotType: Unit
-  elementName: Definitely a Real Bird
-  deployPrefab: {fileID: 285743869717519186, guid: 0c2aca5c62572dc46b78677080875b2b, type: 3}
-  cost: 400
-  cooldown: 5
-  icon: {fileID: -1412338454, guid: 5543624755d3ddc49b442e22bf0dcef4, type: 3}
+  elementName: Trenchcoat
+  deployPrefab: {fileID: 9012312996438749017, guid: 653193470c58c4d4ea562d19457f2204, type: 3}
+  cost: 450
+  cooldown: 15
+  icon: {fileID: 958928293, guid: 41bd9a725479b0041a7f49f9829570e5, type: 3}
