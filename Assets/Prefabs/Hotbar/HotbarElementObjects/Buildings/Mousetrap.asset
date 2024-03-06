@@ -15,6 +15,6 @@ MonoBehaviour:
   slotType: Building
   elementName: Mousetrap
   deployPrefab: {fileID: 9130555602144700992, guid: 077d1bd698153be429a57138604f049c, type: 3}
-  cost: 200
+  cost: 100
   cooldown: 15
   icon: {fileID: -1152966611, guid: b3bae3f1daaeade4a8e7b16e1c72a782, type: 3}

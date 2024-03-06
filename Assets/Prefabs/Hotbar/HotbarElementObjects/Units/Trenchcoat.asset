@@ -15,6 +15,6 @@ MonoBehaviour:
   slotType: Unit
   elementName: Trenchcoat
   deployPrefab: {fileID: 9012312996438749017, guid: 653193470c58c4d4ea562d19457f2204, type: 3}
-  cost: 450
+  cost: 400
   cooldown: 15
   icon: {fileID: 958928293, guid: 41bd9a725479b0041a7f49f9829570e5, type: 3}

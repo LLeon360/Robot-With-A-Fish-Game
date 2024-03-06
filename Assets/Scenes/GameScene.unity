@@ -786,6 +786,10 @@ PrefabInstance:
       propertyPath: _startingMoney
       value: 200
       objectReference: {fileID: 0}
+    - target: {fileID: 6250499630698456529, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
+      propertyPath: incomeCooldown
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7962576010215193264, guid: 80cb3b3b40901ad49838f4f586fb0d2d, type: 3}
       propertyPath: m_Icon
       value: 

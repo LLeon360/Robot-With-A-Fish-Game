@@ -15,6 +15,6 @@ MonoBehaviour:
   slotType: Building
   elementName: Oven
   deployPrefab: {fileID: 8649048406049273539, guid: 85f8f83bfb8fb5f499842a7b7c34b9d8, type: 3}
-  cost: 300
+  cost: 150
   cooldown: 10
   icon: {fileID: 1752684118, guid: 707c23664008fa04a86af4895d8697d8, type: 3}

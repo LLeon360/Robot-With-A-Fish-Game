@@ -15,6 +15,6 @@ MonoBehaviour:
   slotType: Building
   elementName: Factory
   deployPrefab: {fileID: 2398919869819323992, guid: c01543107e0d5934ca8b642fc76a96ad, type: 3}
-  cost: 150
+  cost: 75
   cooldown: 8
   icon: {fileID: -968594978, guid: 0e4071101380f1443beecdc2c6afcb10, type: 3}
