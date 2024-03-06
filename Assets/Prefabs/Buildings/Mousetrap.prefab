@@ -127,6 +127,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2800680372465535718}
   - component: {fileID: 4573241147172280698}
+  - component: {fileID: 1914500159474699768}
   m_Layer: 0
   m_Name: TrapSpringBodyEffect
   m_TagString: Untagged
@@ -201,6 +202,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!210 &1914500159474699768
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4690099318346560249}
+  m_Enabled: 1
+  m_SortingLayerID: 2107996295
+  m_SortingLayer: 4
+  m_SortingOrder: 0
+  m_SortAtRoot: 1
 --- !u!1 &9130555602144700992
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,5 +415,6 @@ MonoBehaviour:
   projectile: {fileID: 0}
   attackRange: 1.1
   attackCooldown: 0
+  nextAttackTime: 0
   state: 
   damage: 0
