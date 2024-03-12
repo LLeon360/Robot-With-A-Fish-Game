@@ -15,6 +15,6 @@ MonoBehaviour:
   slotType: Building
   elementName: Wall But Taller
   deployPrefab: {fileID: 4381936189173398194, guid: 1fa1c43feac536543b056446b25f1d05, type: 3}
-  cost: 250
-  cooldown: 20
+  cost: 300
+  cooldown: 40
   icon: {fileID: 21300000, guid: 3931e36776eca1f4b9a1fb43fe89374b, type: 3}

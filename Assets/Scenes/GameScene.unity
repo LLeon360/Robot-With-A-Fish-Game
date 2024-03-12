@@ -305,13 +305,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 900220542}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.000061035156, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &938302215
 GameObject:
@@ -344,7 +344,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -450,8 +449,12 @@ PrefabInstance:
       value: 30.5
       objectReference: {fileID: 0}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: isGameScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[3]
@@ -464,11 +467,11 @@ PrefabInstance:
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: f6fe5107e6c22034f9140f7825a95cba, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d2e52705b2821f41806e217850fd967, type: 2}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 0d2e52705b2821f41806e217850fd967, type: 2}
+      objectReference: {fileID: 11400000, guid: 9ebeb3194e2269548996451817a897d8, type: 2}
     - target: {fileID: 1742860395755872661, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[7]
       value: 
@@ -514,8 +517,12 @@ PrefabInstance:
       value: 27.708336
       objectReference: {fileID: 0}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
+      propertyPath: isGameScene
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.size
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[1]
@@ -536,15 +543,15 @@ PrefabInstance:
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: b001338178452d8488c6e15018d06a3b, type: 2}
+      objectReference: {fileID: 11400000, guid: 0d2e52705b2821f41806e217850fd967, type: 2}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: aafa8134709bb524ebbe039bf715b5c5, type: 2}
+      objectReference: {fileID: 11400000, guid: 9ebeb3194e2269548996451817a897d8, type: 2}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[7]
       value: 
-      objectReference: {fileID: 11400000, guid: 0d2e52705b2821f41806e217850fd967, type: 2}
+      objectReference: {fileID: 11400000, guid: b001338178452d8488c6e15018d06a3b, type: 2}
     - target: {fileID: 4360114916345789762, guid: d9cfd56f763e92a4b83af8f41a598090, type: 3}
       propertyPath: hotbarElementObjects.Array.data[8]
       value: 
@@ -1249,3 +1256,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5850a8f486e2ded4eb76067cad0c49bd, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 938302216}
+  - {fileID: 2926425181673902772}
+  - {fileID: 8559540958072388584}
+  - {fileID: 900220545}
+  - {fileID: 6399764453643117223}
+  - {fileID: 7488805367482712431}
+  - {fileID: 273944373}
+  - {fileID: 4968789552467206491}
+  - {fileID: 9144115935772784712}

@@ -18,6 +18,11 @@ public class HotbarManager : MonoBehaviour
     private GameObject slotSelector;
     private int selectedSlot;
 
+    [SerializeField]
+    private bool isGameScene = false;
+    [SerializeField]
+    private int playerNum = 0;
+
     // Start is called before the first frame update
     
     void Start()
@@ -25,6 +30,12 @@ public class HotbarManager : MonoBehaviour
         hotbarElements = new List<HotbarElement>();
         hotbarSlots = new List<GameObject>();
         selectedSlot = 0;
+
+        //if is in game scene, pull selection from draft manager
+        if(isGameScene) {
+            hotbarElementObjects = DraftManager.playerDrafts[playerNum];
+        }
+
         UpdateLists();
     }
 

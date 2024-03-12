@@ -162,10 +162,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hotbarSlotPrefab: {fileID: 4358072058978436069, guid: b2165571192378b47971264954b3f09d, type: 3}
-  hotbarElementObjects:
-  - {fileID: 11400000, guid: 32804050baa30fd498335e64c2c08f08, type: 2}
-  - {fileID: 11400000, guid: 3be6f262195aef44abb762b96caf744b, type: 2}
-  - {fileID: 11400000, guid: 9a9f9490e00f97b4d9e86e2dd098bf40, type: 2}
+  hotbarElementObjects: []
   hotbarSlotWidth: 80
   slotSelector: {fileID: 3188560733435495785}
 --- !u!1 &9070167430634631719

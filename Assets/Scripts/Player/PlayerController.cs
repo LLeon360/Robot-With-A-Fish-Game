@@ -14,9 +14,9 @@ public class PlayerController : MonoBehaviour
 
     //target selector should be pointed to
     private GameObject targetTile;
-    [SerializeField]
 
     //movement delays
+    [SerializeField]
     private float moveXDelay = 0.1f;
     [SerializeField]
     private float moveYDelay = 0.3f;
@@ -162,13 +162,13 @@ public class PlayerController : MonoBehaviour
 
     void FetchTargetTile() {
         if(!LaneManager.Instance.BoardInitialized) {
-            Debug.LogError("Board not initialized, cannot fetch target tile");
+            Debug.Log("Board not initialized, cannot fetch target tile");
             return;
         }
         targetTile = LaneManager.Instance.GetTile(currentLane, currentTile);
         if(targetTile == null){
-            Debug.LogError("Target Tile is null, failed to fetch");
-            Debug.LogError("Forcing " + gameObject.name + " to back to (0, 0)");
+            Debug.Log("Target Tile is null, failed to fetch");
+            Debug.Log("Forcing " + gameObject.name + " to back to (0, 0)");
             currentLane = 0;
             currentTile = 0;
             return;
