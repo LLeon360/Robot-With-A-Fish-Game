@@ -69,6 +69,8 @@ public class DraftSelector : MonoBehaviour
         color.a = isMyTurn ? 1 : 0.5f;
         selectorImage.color = color;
 
+        GetComponent<Animator>().enabled = isMyTurn;
+
         //update details text
         if(isMyTurn) {
             detailsText.SetActive(true);
