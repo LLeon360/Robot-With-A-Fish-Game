@@ -105,6 +105,13 @@ public class UnitScript : MonoBehaviour
         if(state == "Idle") { //perhaps on stun
             animator.SetBool("Idle", true);
         }
+
+
+        //kill units that are beyond 100 
+        if(transform.position.x > 100 || transform.position.x < -100)
+        {
+            Destroy(gameObject);
+        }
     }
 
     GameObject CheckInFront() {
