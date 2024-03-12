@@ -17,6 +17,9 @@ public class ProjectileScript : MonoBehaviour
     [SerializeField]
     public float speed;
     [SerializeField]
+    public float lifetime = 30f;
+    private float endTime;
+    [SerializeField]
     public bool canHitBuildings = false;
     
     // Start is called before the first frame update
@@ -24,6 +27,7 @@ public class ProjectileScript : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         unitInfo = GetComponent<UnitInfoScript>();
+        endTime = Time.time + lifetime;
     }
 
     // Update is called once per frame
@@ -36,6 +40,11 @@ public class ProjectileScript : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         angle = (angle > 90 || angle < 90) ? angle : angle-180;
         transform.rotation = Quaternion.Euler(0, 0, angle);
+
+        //destroy if lifetime is up
+        if (Time.time > endTime) {
+            Destroy(gameObject);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
