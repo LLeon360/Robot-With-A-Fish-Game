@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class DraftSelector : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class DraftSelector : MonoBehaviour
 
     //target selector should be pointed to
     private GameObject targetSelection;
+    private GameObject selectorOverlay;
+    private GameObject detailsText;
 
     //movement delays
     [SerializeField]
@@ -35,6 +38,8 @@ public class DraftSelector : MonoBehaviour
     {        
         currentIndex = (playerNum == 0) ? 0 : DraftManager.Instance.RowSize - 1;
         isMyTurn = playerNum == 0;
+        selectorOverlay = transform.Find("Selector Overlay").gameObject;
+        detailsText = transform.Find("Details").gameObject;
     }
 
     // Update is called once per frame
@@ -57,6 +62,21 @@ public class DraftSelector : MonoBehaviour
         //update target tile
         FetchTargetSlot();
         UpdateTransformPosition();
+
+        //set opacity of selector overlay image based on turn
+        Image selectorImage = selectorOverlay.GetComponent<Image>();
+        Color color = selectorImage.color;
+        color.a = isMyTurn ? 1 : 0.5f;
+        selectorImage.color = color;
+
+        //update details text
+        if(isMyTurn) {
+            detailsText.SetActive(true);
+            detailsText.GetComponent<DetailsTextScript>().details = DraftManager.Instance.GetSelectionElement(currentIndex).elementName;
+        }
+        else {
+            detailsText.SetActive(false);
+        }
     }
 
     /**
