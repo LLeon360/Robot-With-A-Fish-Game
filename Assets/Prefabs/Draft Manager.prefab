@@ -75,7 +75,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1 &3446865616345910032
 GameObject:
@@ -703,12 +703,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 403b3f4959d8b3f4fbbd645030526d95, type: 2}
   - {fileID: 11400000, guid: aafa8134709bb524ebbe039bf715b5c5, type: 2}
   - {fileID: 11400000, guid: e947601e460af7e4a80de3a8a66b00cd, type: 2}
+  - {fileID: 11400000, guid: be589cf5428b6954190f70a9ba194801, type: 2}
   - {fileID: 11400000, guid: 32804050baa30fd498335e64c2c08f08, type: 2}
   - {fileID: 11400000, guid: f6fe5107e6c22034f9140f7825a95cba, type: 2}
   - {fileID: 11400000, guid: b001338178452d8488c6e15018d06a3b, type: 2}
   - {fileID: 11400000, guid: 9ebeb3194e2269548996451817a897d8, type: 2}
   draftSize: 8
-  rowSize: 4
+  rowSize: 8
   slotSize: 80
   hotbarSlotPrefab: {fileID: 4358072058978436069, guid: b2165571192378b47971264954b3f09d, type: 3}
   playerSelectors:
@@ -792,7 +793,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!1001 &2074593613758495625
 PrefabInstance:
