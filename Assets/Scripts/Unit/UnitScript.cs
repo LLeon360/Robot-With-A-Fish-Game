@@ -84,11 +84,16 @@ public class UnitScript : MonoBehaviour
         {
             animator.SetBool("Idle", false);
 
-            rb.velocity = direction * speed;
+            if (Mathf.Abs(rb.velocity.x) < speed)
+            {
+                rb.velocity = direction * speed;
+            }
         }
         else
         {
-            rb.velocity = Vector2.zero;
+            if(Mathf.Abs(rb.velocity.x) <= speed + 0.05f) { //continue if getting propelled by trampoline
+                rb.velocity = Vector2.zero;
+            }
         }
 
         if(state == "Attack")

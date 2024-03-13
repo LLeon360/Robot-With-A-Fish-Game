@@ -8,7 +8,6 @@ public class ResourceManager : MonoBehaviour
 
     [SerializeField]
     private int _startingMoney;
-    [SerializeField] //for debugging purposes
     private List<int> _currentMoney;
     
     [SerializeField]

@@ -1208,7 +1208,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9210018859891018434, guid: 6b844fc9e6b4f3e4d9ed32d91296e73f, type: 3}
       propertyPath: hotbarElementObjects.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 9210018859891018434, guid: 6b844fc9e6b4f3e4d9ed32d91296e73f, type: 3}
       propertyPath: hotbarElementObjects.Array.data[1]
@@ -1238,6 +1238,10 @@ PrefabInstance:
       propertyPath: hotbarElementObjects.Array.data[7]
       value: 
       objectReference: {fileID: 11400000, guid: b001338178452d8488c6e15018d06a3b, type: 2}
+    - target: {fileID: 9210018859891018434, guid: 6b844fc9e6b4f3e4d9ed32d91296e73f, type: 3}
+      propertyPath: hotbarElementObjects.Array.data[8]
+      value: 
+      objectReference: {fileID: 11400000, guid: be589cf5428b6954190f70a9ba194801, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
