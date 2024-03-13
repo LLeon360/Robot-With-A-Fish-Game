@@ -1,4 +1,4 @@
-# Robot with a FIsh LIVE ITCH LINK (Play in Browser)
+# Robot with a Fish LIVE ITCH LINK (Play in Browser)
 https://leon360.itch.io/robot-with-a-fish
 
 # About
