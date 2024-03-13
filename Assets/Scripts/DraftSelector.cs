@@ -122,9 +122,18 @@ public class DraftSelector : MonoBehaviour
         int selectionsSize = DraftManager.Instance.selectionElements.Count;
         int rowSize = DraftManager.Instance.RowSize;
         if(direction < 0) {
-            currentIndex = (currentIndex - rowSize + selectionsSize) % selectionsSize;
+            currentIndex = (currentIndex + rowSize);
+            if(currentIndex >= selectionsSize) {
+                currentIndex = currentIndex % rowSize;
+            }
         } else if(direction > 0) {
-            currentIndex = (currentIndex + rowSize) % selectionsSize;
+            currentIndex = (currentIndex - rowSize);
+            if (currentIndex < 0) {
+                currentIndex = (int)((float)selectionsSize / rowSize) * rowSize + currentIndex + rowSize;
+                if(currentIndex >= selectionsSize) {
+                    currentIndex = selectionsSize - rowSize;
+                }
+            }
         }
     }
 
