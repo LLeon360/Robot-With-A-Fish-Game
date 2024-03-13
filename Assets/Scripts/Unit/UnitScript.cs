@@ -112,8 +112,8 @@ public class UnitScript : MonoBehaviour
         }
 
 
-        //kill units that are beyond 100 
-        if(transform.position.x > 100 || transform.position.x < -100)
+        //kill units that are beyond 30 units away 
+        if(transform.position.x > 30 || transform.position.x < -30)
         {
             Destroy(gameObject);
         }
