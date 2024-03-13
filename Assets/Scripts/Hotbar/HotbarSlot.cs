@@ -70,10 +70,10 @@ public class HotbarSlot : MonoBehaviour
         switch(hotbarElement.hotbarElementObject.slotType)
         {
             case "Building":
-                slotBackground.GetComponent<Image>().color = Color.green;
+                slotBackground.GetComponent<Image>().color = new Color(213/255f, 232/255f, 248/255f);
                 break;
             case "Unit":
-                slotBackground.GetComponent<Image>().color = Color.magenta;
+                slotBackground.GetComponent<Image>().color = new Color(248/255f, 213/255f, 215/255f);
                 break;
             default:
                 // log error unknown slot type
