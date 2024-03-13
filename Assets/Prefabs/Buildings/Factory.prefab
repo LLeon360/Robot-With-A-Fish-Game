@@ -260,8 +260,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10d4156433d7c7243adf7b919a368a4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  productionCooldown: 3
-  productionAmount: 5
+  productionCooldown: 4
+  productionAmount: 10
 --- !u!1 &2977611158428493790
 GameObject:
   m_ObjectHideFlags: 0
