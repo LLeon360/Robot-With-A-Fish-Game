@@ -80,11 +80,11 @@ public class HealthScript : MonoBehaviour
         //draw health bar
         Vector2 targetPos = Camera.main.WorldToScreenPoint(transform.position);
         GUIStyle style = new GUIStyle(GUI.skin.box);
-        float fontSize = Screen.width * 0.0078125f; // 10 / 1280
+        float fontSize = Screen.width * 10f/1280;
         style.fontSize = (int)fontSize; // Set the font size
-        float boxWidth = Screen.width * 48f/1280; // 40 / 1280
-        float boxHeight = Screen.height * 0.02083f; // 15 / 720
-        float offsetX = Screen.width * 24f/1280; // 20 / 1280
+        float boxWidth = Screen.width * 48f/1280; 
+        float boxHeight = Screen.height * 15f/720; 
+        float offsetX = Screen.width * 24f/1280;
         float offsetY = 0;
 
         GUI.Box(new Rect(targetPos.x - offsetX, Screen.height - targetPos.y - offsetY, boxWidth, boxHeight), currentHealth.ToString() + '/' + maxHealth.ToString(), style);
