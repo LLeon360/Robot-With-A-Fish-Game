@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   productionCooldown: 5
-  productionAmount: 20
+  productionAmount: 25
 --- !u!1 &2977611158428493790
 GameObject:
   m_ObjectHideFlags: 0
