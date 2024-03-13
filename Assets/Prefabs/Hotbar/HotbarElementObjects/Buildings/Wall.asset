@@ -17,4 +17,4 @@ MonoBehaviour:
   deployPrefab: {fileID: 1839883403198365412, guid: e8836b2749b738a4aa978360bc42ba88, type: 3}
   cost: 200
   cooldown: 30
-  icon: {fileID: 21300000, guid: ce24aaa5eeef0b142a0937b90a8323f1, type: 3}
+  icon: {fileID: 1546416148, guid: ce24aaa5eeef0b142a0937b90a8323f1, type: 3}
