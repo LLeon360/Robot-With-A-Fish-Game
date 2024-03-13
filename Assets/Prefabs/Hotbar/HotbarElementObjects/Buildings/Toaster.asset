@@ -16,5 +16,5 @@ MonoBehaviour:
   elementName: Toaster
   deployPrefab: {fileID: 2287650968253059035, guid: dcb4011ae7afd6a4ca3fcf301dc71c11, type: 3}
   cost: 100
-  cooldown: 5
+  cooldown: 4
   icon: {fileID: 366817368, guid: 2304ea06816fa8c4ab62c14b33c4228a, type: 3}

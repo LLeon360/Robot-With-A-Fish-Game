@@ -1261,9 +1261,9 @@ MonoBehaviour:
   animator: {fileID: 0}
   rb: {fileID: 0}
   unitInfo: {fileID: 0}
-  speed: 0.2
-  damage: 3
-  attackRange: 0.9
+  speed: 0.15
+  damage: 6
+  attackRange: 1
   targetBaseOnly: 0
   targetBuildingsOnly: 0
   state: 

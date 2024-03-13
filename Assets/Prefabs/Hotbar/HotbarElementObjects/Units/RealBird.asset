@@ -16,5 +16,5 @@ MonoBehaviour:
   elementName: Definitely a Real Bird
   deployPrefab: {fileID: 285743869717519186, guid: 0c2aca5c62572dc46b78677080875b2b, type: 3}
   cost: 250
-  cooldown: 3
+  cooldown: 2
   icon: {fileID: -1412338454, guid: 5543624755d3ddc49b442e22bf0dcef4, type: 3}

@@ -15,6 +15,6 @@ MonoBehaviour:
   slotType: Building
   elementName: Trampoline
   deployPrefab: {fileID: 4635843376627000300, guid: 6bc50067af7fe1642b310d653d2ca899, type: 3}
-  cost: 400
-  cooldown: 22
+  cost: 450
+  cooldown: 15
   icon: {fileID: -1603091228, guid: 702a51492d127f246b0e51e07ead1315, type: 3}

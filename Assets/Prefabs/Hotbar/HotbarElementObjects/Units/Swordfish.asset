@@ -16,5 +16,5 @@ MonoBehaviour:
   elementName: Robot with a Swordfish
   deployPrefab: {fileID: 7676843144574227913, guid: 7a221f94f7da05346ba209763809bd87, type: 3}
   cost: 250
-  cooldown: 8
+  cooldown: 6
   icon: {fileID: 600335006, guid: 91796ff8563ce6444b7b333e57942169, type: 3}

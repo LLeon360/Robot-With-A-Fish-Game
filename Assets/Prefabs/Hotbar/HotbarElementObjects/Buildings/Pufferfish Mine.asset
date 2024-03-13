@@ -16,5 +16,5 @@ MonoBehaviour:
   elementName: Pufferfish Mine
   deployPrefab: {fileID: 7020492464751602510, guid: 149851f3e4ac79b429972b456b2d0d07, type: 3}
   cost: 150
-  cooldown: 60
+  cooldown: 50
   icon: {fileID: -1570195705, guid: 5f79bf500249ef54b86508bc64578804, type: 3}

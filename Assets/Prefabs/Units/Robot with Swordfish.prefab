@@ -647,7 +647,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   unitInfo: {fileID: 0}
   speed: 0.4
-  damage: 2
+  damage: 5
   attackRange: 1.5
   targetBaseOnly: 0
   targetBuildingsOnly: 0
