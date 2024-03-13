@@ -182,13 +182,15 @@ public class UnitScript : MonoBehaviour
                     {
                         continue;
                     }
+
+                    float margin = 0.5f;
                     //check that it is in front based on player number
                     if (unitInfo.player == 0) {
-                        if (building.position.x < transform.position.x) {
+                        if (building.position.x < transform.position.x - margin) {
                             continue;
                         }
                     } else if (unitInfo.player == 1) {
-                        if (building.position.x > transform.position.x) {
+                        if (building.position.x > transform.position.x + margin) {
                             continue;
                         }
                     }

@@ -54,13 +54,14 @@ public class TurretScript : MonoBehaviour
         //iterate through children of unitsInLane
         foreach (Transform unit in unitsInLane.transform) 
         {
+            float margin = 0.5f;
             //check that it is in front based on player number
             if (unitInfo.player == 0) {
-                if (unit.position.x < transform.position.x) {
+                if (unit.position.x < transform.position.x - margin) {
                     continue;
                 }
             } else if (unitInfo.player == 1) {
-                if (unit.position.x > transform.position.x) {
+                if (unit.position.x > transform.position.x + margin) {
                     continue;
                 }
             }
@@ -120,7 +121,7 @@ public class TurretScript : MonoBehaviour
         state = "Idle";
     } 
 
-    public void AttackInAreaBidirectional() {
+    public void ExplodeInArea() {
         GameObject thisLane = unitInfo.GetLane();
         Transform unitsInLane = thisLane.transform.Find("Units");
 
@@ -134,7 +135,7 @@ public class TurretScript : MonoBehaviour
 
             float distance = Mathf.Abs(transform.position.x - unit.transform.position.x);
 
-            if (distance < attackRange) {
+            if (distance < attackRange*2) {
                 unit.GetComponent<HealthScript>().Damage(damage, gameObject);
             }
         }
