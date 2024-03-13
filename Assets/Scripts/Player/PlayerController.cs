@@ -71,6 +71,13 @@ public class PlayerController : MonoBehaviour
      */
     public void OnAction(InputAction.CallbackContext ctx) {
         if(ctx.started) {
+            if(!LaneManager.Instance.BoardInitialized) {
+                return;
+            }
+            if(targetTile == null) {
+                Debug.Log("Target Tile is null, cannot place");
+                return;
+            }
             HotbarElement currentSelection = hotbarManager.GetSelectedElement();
             HotbarElementObject currentSelectionObject = currentSelection.GetHotbarElementObject();
             TileScript targetTileScript = targetTile.GetComponent<TileScript>();

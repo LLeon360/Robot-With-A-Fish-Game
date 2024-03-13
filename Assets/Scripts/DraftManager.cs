@@ -148,6 +148,9 @@ public class DraftManager : MonoBehaviour
     }
 
     public void FinishDraft() {
+        //disable both players selectors
+        playerSelectors[0].GetComponent<DraftSelector>().EndTurn();
+        playerSelectors[1].GetComponent<DraftSelector>().EndTurn();
         SceneController.Instance.LoadScene("GameScene");
     }
 }
