@@ -828,7 +828,8 @@ MonoBehaviour:
     to generate money to fund your campaign.\n\nControls:\nPlayer 1\n[WASD] to move
     the tile selector or draft selector\n[C] and [B] to navigate through the hotbar\n[V]
     to place/deploy/action\n\nPlayer 2\nArrow keys to move the tile selector or draft
-    selector\n[,] and [/] to navigate through the hot bar\n[.] to place/deploy/action\n"
+    selector\n[,] and [/] to navigate through the hot bar\n[.] to place/deploy/action\n\n[Esc]
+    to pause"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2a84f3ada14b9244597b0b42ce3bdbd1, type: 2}
   m_sharedMaterial: {fileID: -858432943547349676, guid: 2a84f3ada14b9244597b0b42ce3bdbd1, type: 2}
