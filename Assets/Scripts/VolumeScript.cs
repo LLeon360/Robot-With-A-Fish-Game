@@ -26,5 +26,11 @@ public class VolumeScript : MonoBehaviour
 
         // Set the volume of the AudioMixer
         audioMixer.SetFloat("Volume", volume);
+
+        //mute at min
+        if(slider.value <= 0.55) 
+        {
+            audioMixer.SetFloat("Volume", -80);
+        }
     }
 }
