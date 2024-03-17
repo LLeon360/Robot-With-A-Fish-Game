@@ -13,3 +13,6 @@ Draft your arsenal of deadly silly robots and towers to defeat your opponent!
 
 
 ![image](https://github.com/LLeon360/Untitled-ENGR96A-Game/assets/103869590/fd2f887c-d230-4114-91ab-b4fc2687e326)
+
+# Assets
+Credits to https://github.com/codeByeed for most of the spritework!
